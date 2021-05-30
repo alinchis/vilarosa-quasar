@@ -4,7 +4,7 @@ export default {
   navMenu: {
     aboutUs: 'Despre Noi',
     ourServices: 'Serviciile Noastre',
-    prices: 'Preturi',
+    prices: 'Prețuri',
     map: 'Harta',
   },
 
@@ -13,9 +13,11 @@ export default {
 
   aboutUs: {
     welcome: 'Despre noi',
-    open: 'Vila Rosa este deschisă din ianuarie 2001. Oferim servicii de cazare, categoria 2 și 3 stele, și de servire a micului dejun. Activitatea de cazare se desfășoară în două clădiri situate în aceeași incintă, iar Micul Dejun se servește în clădirea principală, corpul de 2 stele.',
-    location: 'Ne găsiți în Cluj-Napoca, Cartierul Mănăștur (vestul orașului, ieșirea spre Oradea), într-o zonă de case și ateliere mici, în apropiere de Cimitirul Mănăștur. În zilele lucrătoare există puțină agitație, dar pe timp de noapte este foarte liniște.',
-    clients: 'Clientela principală o constituie firmele, cu afaceri în Cluj sau doar în tranzit. Promovăm relații de lungă durată cu clienții noștri și acordăm atenție sporită la calitatea serviciilor oferite.',
+    open: 'Vila Rosa este deschisă din ianuarie 2001. SC 4 Anotimpuri Turism SRL a preluat afacerea in 2010.',
+    services: 'Oferim servicii de cazare, categoria 2 și 3 stele, și de servire a micului dejun. Activitatea de cazare se desfășoară în două clădiri situate în aceeași incintă, iar Micul Dejun se servește în clădirea principală, corpul de 2 stele.',
+    location: 'Ne găsiți în Cluj-Napoca, Cartierul Mănăștur (vestul orașului, ieșirea spre Oradea), într-o zonă de case și ateliere mici, în apropiere de Cimitirul Mănăștur.',
+    noise: 'În zilele lucrătoare există puțină agitație, dar pe timp de noapte este foarte liniște. Fac excepție avioanele, care se aud in tot orașul.',
+    clients: 'Clientela principală o constituie firmele, cu afaceri în Cluj sau doar în tranzit.',
     quality: 'Căutam frecvent sa aducem îmbunătățiri pentru a oferi clienților cele mai bune servicii.',
   },
 
@@ -110,7 +112,8 @@ export default {
     id: 'RO26403597',
     orcId: 'J12/48/2010',
     country: 'România',
-    address: '400664 Cluj-Napoca, Str. Frunzişului nr.4',
+    postalCode: '400664',
+    address: 'Cluj-Napoca, Str. Frunzişului nr.4',
     telephone: '+40.264.425.507',
     mobile: '+40.747.111.961',
     email: {

@@ -1,7 +1,7 @@
 <template>
   <div class="row full-width justify-center no-wrap">
 
-    <q-card class="company-card">
+    <q-card class="company-card bg-transparent" flat>
       <q-card-section>
 <!--        <div class="item-title">{{ company.name }}</div>-->
         <div class="item-label">
@@ -25,7 +25,7 @@
       </q-card-section>
     </q-card>
 
-    <q-card class="company-card">
+    <q-card class="company-card bg-transparent" flat>
       <q-card-section>
       <div class="item-label">
         <q-icon name="las la-at" class="auth-icon"></q-icon>
@@ -49,7 +49,7 @@
       </q-card-section>
     </q-card>
 
-    <q-card class="company-card">
+    <q-card class="company-card bg-transparent" flat>
       <q-card-section>
         <div class="item-label">
           <q-icon name="las la-certificate" class="auth-icon"></q-icon>

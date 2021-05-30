@@ -12,9 +12,12 @@ export default {
   importantMsg: 'Vila Rosa has taken additional care to prevent COVID-19 spread.',
 
   aboutUs: {
-    open: 'The villa is open since january 2001. We currently offer 2 and 3 stars accomodation and breakfast services. The hotel rooms are divided in two buildings at the same site, the breakfast is served in the main, 2 stars hotel, building.',
-    location: 'We are situated in Cluj-Napoca, Mănăștur Neighbourhood (west side), in an area of housing and small workshops, close to the Mănăștur Cemetery. During work days there is some commotion, but in night time it is very quiet.',
-    clients: 'Our main customers are companies who have business in Cluj or are just passing thru. These are long term relationships, so the quality we provide is taken very seriously.',
+    welcome: 'About Us',
+    open: 'The villa is open since january 2001. SC 4 Anotimpuri Turism SRL took over the business in 2010.',
+    services: 'We currently offer 2 and 3 stars accomodation and breakfast services. The hotel rooms are divided in two buildings at the same site, the breakfast is served in the main, 2 stars hotel, building.',
+    location: 'We are located in Cluj-Napoca, Mănăștur Neighbourhood (west side), in an area of housing and small workshops, close to the Mănăștur Cemetery.',
+    noise: 'During work days there is some commotion, but in night time it is very quiet, with the exception of airplanes, that can be heard throughout the city.',
+    clients: 'Our main customers are companies who have business in Cluj or are just passing thru.',
     quality: 'We are constantly making improvements in order to keep up with the increasing competition and the clients requirements.',
   },
 
@@ -109,7 +112,8 @@ export default {
     id: 'RO26403597',
     orcId: 'J12/48/2010',
     country: 'Romania',
-    address: '400664 Cluj-Napoca, No.4 Frunzişului St.',
+    postalCode: '400664',
+    address: 'Cluj-Napoca, No.4 Frunzişului St.',
     telephone: '+40.264.425.507',
     mobile: '+40.747.111.961',
     email: {

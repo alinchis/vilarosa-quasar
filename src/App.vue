@@ -5,6 +5,11 @@
 </template>
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+
+  created() {
+    // set default language
+    // localStorage.setItem('language', 'ro-ro');
+  }
 }
 </script>
