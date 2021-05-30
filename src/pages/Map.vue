@@ -1,18 +1,17 @@
 <template>
-  <div class="fit q-pa-md">
-    MAP
-
+  <!-- main content -->
+  <div id="map-box" class="fit">
+    map
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'PageIndex',
+  name: 'Map',
   data () {
     return {
-      slide: 1,
-      autoplay: true,
+
     }
   },
 

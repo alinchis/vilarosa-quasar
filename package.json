@@ -12,8 +12,10 @@
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "core-js": "^3.6.5",
+    "mapbox-gl": "^2.3.0",
     "quasar": "^1.0.0",
-    "vue-i18n": "^8.0.0"
+    "vue-i18n": "^8.0.0",
+    "vue-mapbox": "^0.4.1"
   },
   "devDependencies": {
     "@quasar/app": "^2.0.0",

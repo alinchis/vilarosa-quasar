@@ -18,7 +18,7 @@
     </div>
 
     <!-- page container -->
-    <q-page-container class="q-pa-none">
+    <q-page-container class="fit q-pa-none">
       <router-view />
     </q-page-container>
   </q-layout>
