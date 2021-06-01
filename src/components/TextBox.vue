@@ -1,12 +1,22 @@
 <template>
   <q-card class="company-card bg-transparent" flat>
     <q-card-section class="">
-      <q-icon :name="iconName" size="xl" class="text-blue q-pb-md q-pl-lg"></q-icon>
+      <q-icon
+        v-for="(iconItem, iconIndex) in iconList"
+        :key="'i' + iconIndex"
+        :name="iconItem"
+        size="xl"
+        :class="textColor + ' q-pb-md q-pl-lg'"
+      ></q-icon>
 
 <!--      <q-separator vertical />-->
 
-      <div style="width: 100%">
-        {{ textContent }}
+      <div
+        style="width: 100%"
+        v-for="(textItem, textIndex) in textContent"
+        :key="'t' + textIndex"
+      >
+        {{ textItem }}
       </div>
     </q-card-section>
   </q-card>
@@ -15,7 +25,7 @@
 <script>
 export default {
   name: "AboutUsTextBox",
-  props: [ 'textContent', 'iconName' ],
+  props: [ 'textContent', 'iconList', 'textColor' ],
 }
 </script>
 

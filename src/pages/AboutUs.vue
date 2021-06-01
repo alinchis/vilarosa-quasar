@@ -5,45 +5,46 @@
       <q-parallax
         src="~assets/VilaRosa/vr_panorama_6.jpg"
         :height="600"
+        :speed="0.75"
         class=""
       >
-        <q-img src="~assets/Logo/sigla_vr_img@2x.png" style="max-width: 300px;"></q-img>
+        <q-img src="~assets/Logo/sigla_vr_img@2x.png" style="max-width: 300px; margin-bottom: 250px"></q-img>
       </q-parallax>
     </div>
 
-    <div class="menu-line">
+    <div class="menu-line q-mb-lg"></div>
 
-    </div>
+    <div class="fit row wrap justify-center items-start content-start">
+      <div>
+        <div class="container column q-pb-xl">
 
-    <div class="container column q-pb-xl">
-      <!-- About Us area -->
-      <p class="section-title">{{ $t('aboutUs.welcome') }}</p>
-      <q-separator />
-      <div class="row justify-center">
-        <text-box :text-content="$t('aboutUs.open')" icon-name="las la-history"></text-box>
-        <text-box :text-content="$t('aboutUs.services')" icon-name="las la-hotel"></text-box>
-        <text-box :text-content="$t('aboutUs.location')" icon-name="las la-map-marked"></text-box>
-        <text-box :text-content="$t('aboutUs.noise')" icon-name="las la-volume-up"></text-box>
-        <text-box :text-content="$t('aboutUs.clients')" icon-name="las la-users"></text-box>
-        <text-box :text-content="$t('aboutUs.quality')" icon-name="las la-calendar-plus"></text-box>
-      </div>
+          <!-- About Us area -->
+          <p class="section-title">{{ $t('aboutUs.welcome') }}</p>
+          <q-separator />
+          <div class="row justify-center">
+            <text-box :text-content="[ $t('aboutUs.open') ]" :icon-list='[ "las la-history" ]' text-color="text-red-9"></text-box>
+            <text-box :text-content="[ $t('aboutUs.services') ]" :icon-list='[ "las la-hotel" ]' text-color="text-red-9"></text-box>
+            <text-box :text-content="[ $t('aboutUs.location') ]" :icon-list='[ "las la-map-marked" ]' text-color="text-red-9"></text-box>
+            <text-box :text-content="[ $t('aboutUs.noise') ]" :icon-list='[ "las la-volume-up" ]' text-color="text-red-9"></text-box>
+            <text-box :text-content="[ $t('aboutUs.clients') ]" :icon-list='[ "las la-users" ]' text-color="text-red-9"></text-box>
+            <text-box :text-content="[ $t('aboutUs.quality') ]" :icon-list='[ "las la-calendar-plus" ]' text-color="text-red-9"></text-box>
+          </div>
 
-<!--      <q-separator />-->
+          <!-- Company area -->
+          <p class="section-title">{{ $t('company.name') }}</p>
+          <q-separator />
+          <company-box :company="$t('company')"></company-box>
 
-      <!-- Company area -->
-      <p class="section-title">{{ $t('company.name') }}</p>
-      <q-separator />
-      <company-box :company="$t('company')"></company-box>
+          <!-- Authorities area -->
+          <p class="section-title">{{ $t('authorities.title') }}</p>
+          <q-separator />
+          <div class="row justify-center no-wrap">
+            <auth-box id-index="1" :auth="$t('authorities.anpc')"></auth-box>
+            <auth-box id-index="2" :auth="$t('authorities.ansvsa')"></auth-box>
+            <auth-box id-index="3" :auth="$t('authorities.natcad')"></auth-box>
+          </div>
+        </div>
 
-<!--      <q-separator />-->
-
-      <!-- Authorities area -->
-      <p class="section-title">{{ $t('authorities.title') }}</p>
-      <q-separator />
-      <div class="row justify-center no-wrap">
-        <auth-box id-index="1" :auth="$t('authorities.anpc')"></auth-box>
-        <auth-box id-index="2" :auth="$t('authorities.ansvsa')"></auth-box>
-        <auth-box id-index="3" :auth="$t('authorities.natcad')"></auth-box>
       </div>
     </div>
 
@@ -57,12 +58,12 @@
 
 <script>
 import { i18n } from "boot/i18n";
-import textBox from '../components/AboutUsTextBox.vue';
+import textBox from 'components/TextBox.vue';
 import companyBox from '../components/AboutUsCompany.vue';
 import authBox from '../components/AboutUsAuthoritiesBox';
 
 export default {
-  name: 'PageIndex',
+  name: 'AboutUs',
   components: { textBox, companyBox, authBox },
   data () {
     return {

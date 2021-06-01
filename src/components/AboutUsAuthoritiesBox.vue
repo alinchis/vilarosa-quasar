@@ -66,11 +66,12 @@ export default {
 
 .item-title
   font-size: 1.1rem
+  color: dimgray
 
 .item-label
   font-size: 0.85rem
   color: gray
 
 .auth-icon
-  color: red
+  color: darkviolet
 </style>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="92"
+   height="92"
+   viewBox="0 0 24.341668 24.341668"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="add_sign.svg"
+   inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="6.6520416"
+     inkscape:cx="43.370144"
+     inkscape:cy="25.556064"
+     inkscape:window-width="1978"
+     inkscape:window-height="1310"
+     inkscape:window-x="331"
+     inkscape:window-y="15"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:lockguides="false"
+     showguides="true"
+     height="140mm"
+     width="46px"
+     inkscape:snap-path-clip="true"
+     inkscape:snap-path-mask="true"
+     objecttolerance="20"
+     inkscape:snap-perpendicular="true"
+     inkscape:snap-tangential="true"
+     units="px"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-paths="true"
+     inkscape:snap-object-midpoints="true" />
+  <defs
+     id="defs2">
+    <rect
+       x="-360.38733"
+       y="128.50237"
+       width="216.54022"
+       height="154.95638"
+       id="rect7892" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1013"
+       is_visible="true"
+       lpeversion="1"
+       weight="25"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-10.420507,-15.72324)">
+    <g
+       id="g28609"
+       transform="translate(-0.19146567,-0.20691167)">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1.51428;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 22.782806,18.17911 V 38.02286"
+         id="path28493" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1.51428;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 32.704681,28.100985 H 12.860931"
+         id="path28493-6" />
+    </g>
+  </g>
+</svg>

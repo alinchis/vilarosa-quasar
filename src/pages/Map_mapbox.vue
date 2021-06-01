@@ -3,7 +3,7 @@
     <MglMap :accessToken="accessToken" :mapStyle.sync="mapStyle">
       <MglNavigationControl position="top-right" />
       <MglGeolocateControl position="top-right" />
-      <MglMarker :coordinates="center" color="red" />
+      <MglMarker :coordinates="center" color="darkred" />
     </MglMap>
   </div>
 </template>
@@ -20,7 +20,7 @@ export default {
       accessToken: "pk.eyJ1IjoiYWxpbmNoaXMiLCJhIjoiY2toNHQ3eGdzMGVmaTJyczVyanN0dWY0YiJ9.cmyaXMKo-Q055Iu2y5V7fQ",
       mapStyle: "mapbox://styles/alinchis/ckpb1kops2wno17tpzn8u7jra",
       container:'mapContainer',
-      center: [ 23.56614, 46.75656 ],
+      center: [ 23.56613, 46.75659 ],
       zoom: 15,
     };
   },

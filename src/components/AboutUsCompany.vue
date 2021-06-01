@@ -94,5 +94,5 @@ export default {
   color: gray
 
 .auth-icon
-  color: red
+  color: $red-9
 </style>
