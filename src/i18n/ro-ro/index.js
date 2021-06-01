@@ -63,9 +63,14 @@ export default {
     },
 
     info: {
-      rooms2s: 'Camerele de 2* sunt de dimensiuni generoase, echipate standard, mobilier minimal, cu baie proprie cu duș, televizor LCD/LED, minibar, uscător de păr și internet wireless gratuit. Apartamentele, sunt compuse din 2 încăperi separate prin ușă: prima cu 1 pat single, iar a doua cu 1 pat dublu. Baia este situată între ele, cu intrare din camera single. Doar încăperea a doua are televizor. Intrarea se face printr-o terasă exterioară. Nu se oferă paturi suplimentare.',
-      rooms2sp: 'Camerele sunt deschise din august 2017 si dispun de cele mai moderne servicii din unitatea noastră, similare camerelor de 3*. Se găsesc la mansarda (Etajul 4) corpului de 2*. Față de camerele de 2* oferă suplimentar aer condiționat și seif.',
-      rooms3s: 'Față de camerele de 2*, sunt echipate suplimentar cu aer condiționat.',
+      rooms2s: ['Camerele de 2* sunt de dimensiuni generoase, echipate standard, mobilier minimal, cu baie proprie cu duș, televizor LCD/LED, minibar, uscător de păr și internet wireless gratuit.', 'Apartamentele, sunt compuse din 2 încăperi separate prin ușă: prima cu 1 pat single, iar a doua cu 1 pat dublu. Baia este situată între ele, cu intrare din camera single. Doar încăperea a doua are televizor. Intrarea se face printr-o terasă exterioară.'],
+      rooms2sp: ['Camerele sunt deschise din august 2017 și dispun de cele mai moderne servicii din unitatea noastră.', 'Camerele oferă servicii de 3*, dar se găsesc la mansarda (Etajul 4) corpului de 2*.', 'Față de camerele de 2* oferă suplimentar aer condiționat și seif.'],
+      rooms3s: ['Camerele de 3* se găsesc în pavilionul secundar, fără Recepție, situat în spatele parcării.', 'Față de camerele de 2*, sunt echipate suplimentar cu aer condiționat.'],
+      noSmoking: 'Toate camerele sunt de nefumători. Pentru fumători recomandăm camerele cu balcon.',
+      sensors: 'Pentru siguranța dumneavoastră, toate camerele și holurile sunt dotate cu senzori de detecție a focului /fumului. Sabotarea senzorilor declanșează alarma în Recepție. Persoanele care sabotează senzorii vor fi evacuate fără a li se returna suma plătită.',
+      fireSafety: 'Va rugăm să nu folosiți lumanări în camere, acestea prezintă pericol de incendiu.',
+      powerSafety: 'La camerele din pavilionul de 3*, prizele de la capul patului sunt marcate pentru utilizare cu consumatori mici (telefoane, laptopuri..). Va rugăm să respectați indicațiile.',
+      noExtraBeds: 'Nu se oferă paturi suplimentare.',
     },
 
     types: {

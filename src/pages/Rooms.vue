@@ -47,23 +47,79 @@
         <div class="container column q-pb-xl">
           <p class="section-title">{{ $t('rooms.roomsInfoTitle') }}</p>
           <q-separator />
+          <!-- rooms info container -->
           <div class="row justify-center">
-            <info-table></info-table>
+            <!-- 2* rooms -->
+            <info-box
+              :header-icons="[ 'las la-star', 'las la-star' ]"
+              header-color="text-red-10"
+              :icons-list="[ 'shower', 'hairdryer', 'lcd_tv', 'minibar' ]"
+              icons-color=""
+              :text-list="$t('rooms.info.rooms2s')"
+            ></info-box>
+            <!-- 2*+ rooms -->
+            <info-box
+              :header-icons="[ 'las la-star', 'las la-star', 'las la-star-half' ]"
+              header-color="text-red-10"
+              :icons-list="[ 'add_sign', 'ac', 'safe_box' ]"
+              icons-color=""
+              :text-list="$t('rooms.info.rooms2sp')"
+            ></info-box>
+            <!-- 3* rooms -->
+            <info-box
+              :header-icons="[ 'las la-star', 'las la-star', 'las la-star' ]"
+              header-color="text-red-10"
+              :icons-list="[ 'add_sign', 'ac' ]"
+              icons-color=""
+              :text-list="$t('rooms.info.rooms3s')"
+            ></info-box>
+          </div>
+
+          <q-separator />
+
+          <div class="row">
+            <!-- NO smoking -->
+            <div class="row items-center q-pt-md q-pl-md">
+              <q-icon name="las la-smoking-ban" size="xl" class="col-auto text-red-10 q-pa-md"></q-icon>
+              <p class="col section-subtitle q-ma-none q-pa-md">{{ $t('rooms.info.noSmoking') }}</p>
+            </div>
+            <!-- Mind the sensors -->
+            <div class="row items-center q-pt-md q-pl-md">
+              <q-icon name="las la-exclamation-triangle" size="xl" class="col-auto text-red-10 q-pa-md"></q-icon>
+              <p class="col section-subtitle q-ma-none q-pa-md">{{ $t('rooms.info.sensors') }}</p>
+            </div>
+            <!-- NO candles -->
+            <div class="row items-center q-pt-md q-pl-md">
+              <q-icon name="las la-fire" size="xl" class="col-auto text-red-10 q-pa-md"></q-icon>
+              <p class="col section-subtitle q-ma-none q-pa-md">{{ $t('rooms.info.fireSafety') }}</p>
+            </div>
+            <!-- Mind the power requirements -->
+            <div class="row items-center q-pt-md q-pl-md">
+              <q-icon name="las la-plug" size="xl" class="col-auto text-red-10 q-pa-md"></q-icon>
+              <p class="col section-subtitle q-ma-none q-pa-md">{{ $t('rooms.info.powerSafety') }}</p>
+            </div>
+            <!-- NO extra beds -->
+            <div class="row items-center q-pt-md q-pl-md">
+              <q-icon name="las la-bed" size="xl" class="col-auto text-red-10 q-pa-md"></q-icon>
+              <p class="col section-subtitle q-ma-none q-pa-md">{{ $t('rooms.info.noExtraBeds') }}</p>
+            </div>
+
           </div>
         </div>
+
 
         <!-- Info Prices area -->
         <div class="container column q-pb-xl">
           <p class="section-title">{{ $t('rooms.priceInfo.title') }}</p>
           <q-separator/>
           <div class="row justify-around">
-            <text-box :text-content="[ $t('rooms.priceInfo.notes') ]" :icon-list='[ "las la-coins" ]' text-color="text-red-9"></text-box>
-            <text-box :text-content="[ $t('rooms.priceInfo.rooms') ]" :icon-list='[ "las la-tags" ]' text-color="text-red-9"></text-box>
+            <text-box :text-content="[ $t('rooms.priceInfo.notes') ]" :icon-list='[ "las la-coins" ]' text-color="text-red-10"></text-box>
+            <text-box :text-content="[ $t('rooms.priceInfo.rooms') ]" :icon-list='[ "las la-tags" ]' text-color="text-red-10"></text-box>
           </div>
         </div>
 
         <!-- Vouchers area -->
-        <div class="container column q-pb-xl">
+        <div v-if="$root.$i18n.locale === 'ro-ro' " class="container column q-pb-xl">
                     <p class="section-title">{{ $t('rooms.voucherVacation') }}</p>
           <q-separator class="q-mb-md"/>
           <div class="row justify-around">
@@ -89,13 +145,13 @@
 import { i18n } from "boot/i18n";
 import textBox from 'components/TextBox.vue';
 import pricesTable from 'components/PricesTable.vue';
-import infoTable from 'components/InfoTable.vue';
+import infoBox from 'components/InfoBox.vue';
 import companyBox from '../components/AboutUsCompany.vue';
 import authBox from '../components/AboutUsAuthoritiesBox';
 
 export default {
   name: 'OurServices',
-  components: { textBox, pricesTable, infoTable },
+  components: { textBox, pricesTable, infoBox },
   data () {
     return {
       slide: 1,
@@ -124,9 +180,10 @@ export default {
 
 .section-subtitle
   font-size: 1rem
-  padding: 1.5rem 2rem 0rem 2rem
-  margin: 0
+  //padding: 1.5rem 2rem 0rem 2rem
+  //margin: 0
   color: #525252
+  overflow: auto
 
 .section-subtitle2
   font-size: 1rem

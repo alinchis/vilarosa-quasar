@@ -63,9 +63,14 @@ export default {
     },
 
     info: {
-      rooms2s: 'The 2* rooms are generous in size, with minimal furniture, own bath, LCD/LED TV, minibar, hairdryer and free wireless internet. The aparments, are composed of two rooms separated by door: the first room holds 1 single bed and the second 1 double bed. The bathroom is between the two, connected to the single room. Only the second room has TV. One enters the apartment traversing an exterior terace. We do not provide extra beds.',
-      rooms2sp: 'The rooms are opened from august 2017 and represent the most modern services we can offer, at this time. They are similar to 3* rooms, but are located at the 4th floor of the 2* building.',
-      rooms3s: 'In addition to 2* rooms, they are equipped with air conditioning.',
+      rooms2s: ['The 2* rooms are generous in size, with minimal furniture, own bath, LCD/LED TV, minibar, hairdryer and free wireless internet.', 'The aparments, are composed of two rooms separated by door: the first room holds 1 single bed and the second 1 double bed. The bathroom is between the two, connected to the single room. Only the second room has TV. One enters the apartment traversing an exterior terace.'],
+      rooms2sp: ['The rooms are opened since august 2017 and represent the most modern services we can offer, at this time.', 'They are similar to 3* rooms, but are located at the 4th floor of the 2* building.', 'In addition to 2* services, they provide air conditioning and safe box.'],
+      rooms3s: ['The 3* rooms are located in a separate building, without Reception, next to the parking.', 'In comparison to 2* rooms, they are equipped with air conditioning.'],
+      noSmoking: 'All our rooms are non-smoking rooms. We recommend our smoker clients to request rooms with balcony.',
+      sensors: 'For your safety, all our rooms and hallways have fire /smoke detectors. Tempering with a sensor will trigger an alarm in the Reception. In case of sensor tempering, we will evacuate the responsible clients without reimbursement.',
+      fireSafety: 'Please do not use candles, they pose a serious fire hazard.',
+      powerSafety: 'The rooms located in the 3* pavilion have power socket in the bed headboard for small appliances like mobiles and laptops. Please don\'t plug in power hungry appliances.',
+      noExtraBeds: 'We do not provide extra beds.',
     },
 
     types: {

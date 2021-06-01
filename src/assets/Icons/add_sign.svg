@@ -28,8 +28,8 @@
      inkscape:cy="25.556064"
      inkscape:window-width="1978"
      inkscape:window-height="1310"
-     inkscape:window-x="331"
-     inkscape:window-y="15"
+     inkscape:window-x="2836"
+     inkscape:window-y="46"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
      inkscape:lockguides="false"
@@ -74,7 +74,7 @@
      transform="translate(-10.420507,-15.72324)">
     <g
        id="g28609"
-       transform="translate(-0.19146567,-0.20691167)">
+       transform="matrix(0.60987707,0,0,0.60987707,8.6966293,10.755927)">
       <path
          style="fill:none;stroke:#000000;stroke-width:1.51428;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="M 22.782806,18.17911 V 38.02286"
