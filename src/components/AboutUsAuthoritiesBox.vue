@@ -8,7 +8,7 @@
       </div>
       </q-card-section>
 <!--    <q-separator inset />-->
-    <q-card-section>
+    <q-card-section class="q-pt-none">
       <div class="item-label">
         <q-icon name="las la-phone" class="auth-icon"></q-icon>
         {{ auth.telephone }}
@@ -73,5 +73,5 @@ export default {
   color: gray
 
 .auth-icon
-  color: darkviolet
+  color: steelblue
 </style>

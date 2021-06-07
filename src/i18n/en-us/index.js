@@ -57,9 +57,9 @@ export default {
     },
 
     titles: {
-      rooms2s: 'Rooms 2*',
-      rooms2sp: 'Rooms 2*+',
-      rooms3s: 'Rooms 3*',
+      rooms2s: 'Rooms ★★',
+      rooms2sp: 'Rooms ★★+',
+      rooms3s: 'Rooms ★★★',
     },
 
     info: {
@@ -141,6 +141,12 @@ export default {
     environment: 'For a healthy environment.',
   },
 
+  photoGallery: {
+    room: 'Room',
+    apt: 'Apartment',
+    bath: 'Bathroom',
+  },
+
   company: {
     title: 'Company Info',
     name: 'S.C. 4 Anotimpuri Turism S.R.L.',
@@ -164,9 +170,11 @@ export default {
     },
     certification: {
       MDRT: 'H&R Certification MDRT',
-      managerCEDES: 'Manager Certification CEDES',
-      managerANTREC: 'Manger Certification ANTREC',
-      qualityCEDES: 'Service Quality CEDES',
+      gallery: {
+        villa2s: 'Certificate of Classification Villa Rosa ★★',
+        villa3s: 'Certificate of Classification Villa Rosa ★★★',
+        restaurant: 'Certificate of Classification Restaurant ★★★',
+      },
     },
   },
 

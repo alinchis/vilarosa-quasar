@@ -3,15 +3,16 @@
 
     <div>
       <q-parallax
-        src="~assets/VilaRosa/vr_panorama_6.jpg"
+        src="Images/VilaRosa/vr_panorama_6.jpg"
         :height="600"
         :speed="0.75"
         class=""
       >
-        <q-img src="~assets/Logo/sigla_vr_img@2x.png" style="max-width: 300px; margin-bottom: 250px"></q-img>
+        <q-img src="Logo/sigla_vr_img@2x.png" style="max-width: 300px; margin-bottom: 250px"></q-img>
       </q-parallax>
     </div>
 
+    <!-- menu line -->
     <div class="menu-line q-mb-lg"></div>
 
     <div class="fit row wrap justify-center items-start content-start">
@@ -31,6 +32,17 @@
           </div>
 
           <!-- Company area -->
+<!--          <div class="row justify-between">-->
+<!--            <p class="section-title">{{ $t('company.name') }}</p>-->
+<!--            <q-btn-->
+<!--              color="primary"-->
+<!--              icon="las la-camera"-->
+<!--              :label="$t('company.certification.MDRT')"-->
+<!--              no-caps-->
+<!--              @click="openGallery(0)"-->
+<!--              class="section-btn"-->
+<!--            />-->
+<!--          </div>-->
           <p class="section-title">{{ $t('company.name') }}</p>
           <q-separator />
           <company-box :company="$t('company')"></company-box>
@@ -57,7 +69,6 @@
 </template>
 
 <script>
-import { i18n } from "boot/i18n";
 import textBox from 'components/TextBox.vue';
 import companyBox from '../components/AboutUsCompany.vue';
 import authBox from '../components/AboutUsAuthoritiesBox';
@@ -65,31 +76,35 @@ import authBox from '../components/AboutUsAuthoritiesBox';
 export default {
   name: 'AboutUs',
   components: { textBox, companyBox, authBox },
-  data () {
-    return {
-      slide: 1,
-      autoplay: true,
-    }
-  },
-
 }
 </script>
 
 <style lang="sass" scoped>
 .menu-line
   background-color: darkred
-  height: 5px
+  //height: 5px
 
 .container
   display: flex
   margin: auto
   max-width: 920px
 
+.header-title
+  font-size: 1.5rem
+  //padding: 2rem 2rem 0rem 2rem
+  margin: 0
+  color: white
+
 .section-title
   font-size: 1.5rem
   padding: 2rem 2rem 0rem 2rem
   margin: 0
   color: #525252
+
+.section-btn
+  font-size: 0.9rem
+  margin: 2rem 2rem 0rem 2rem
+  padding: 0
 
 .footer
   background-color: $blue-grey-2

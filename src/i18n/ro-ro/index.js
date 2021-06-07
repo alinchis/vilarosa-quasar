@@ -16,7 +16,7 @@ export default {
     open: 'Vila Rosa este deschisă din ianuarie 2001. SC 4 Anotimpuri Turism SRL a preluat afacerea in 2010.',
     services: 'Oferim servicii de cazare, categoria 2 și 3 stele, și de servire a micului dejun. Activitatea de cazare se desfășoară în două clădiri situate în aceeași incintă, iar Micul Dejun se servește în clădirea principală, corpul de 2 stele.',
     location: 'Ne găsiți în Cluj-Napoca, Cartierul Mănăștur (vestul orașului, ieșirea spre Oradea), într-o zonă de case și ateliere mici, în apropiere de Cimitirul Mănăștur.',
-    noise: 'În zilele lucrătoare există puțină agitație, dar pe timp de noapte este foarte liniște. Fac excepție avioanele, care se aud in tot orașul.',
+    noise: 'În zilele lucrătoare există puțină agitație, dar pe timp de noapte este foarte liniște. Fac excepție avioanele, care se aud în tot orașul.',
     clients: 'Clientela principală o constituie firmele, cu afaceri în Cluj sau doar în tranzit.',
     quality: 'Căutam frecvent sa aducem îmbunătățiri pentru a oferi clienților cele mai bune servicii.',
   },
@@ -29,7 +29,7 @@ export default {
     reception: 'Recepția funcționează în regim zilnic între orele 08:00-20:00. Nu se efectueaza rezervări și cazări înafara programului. Pentru rezervări și informații vă rugăm să ne contactați.',
     reservation: 'La finalizarea procesului de rezervare, Recepția transmite confirmarea rezervării prin mesaj pe mobil sau e-mail. Numai rezervările care au primit confirmare sunt considerate valabile. Confirmarea cuprinde numele persoanei care a făcut rezervarea, perioada șederii, numărul și tipul camerelor rezervate, numărul de oaspeți asteptați, tarifele acordate și numele recepționerului de serviciu. În ziua cazării, e posibil ca Recepția să contactateze telefonic persoana responsabilă de rezervare pentru a confirma sosirea.',
     checkInOut: 'Ziua hotelieră începe la ora 15:00 în ziua cazării și se încheie la ora 11:00, în ziua următoare. Cazările se efectuează doar în intervalul 15:00-20:00. Pentru excepții vă rugăm să anunțați Recepția din timp, deoarece pot apărea suprapuneri cu alte rezervări și se pot percepe tarife suplimentare.',
-    gdpr: 'La momentul cazarii, clientiilor li se cere sa completeze si semneze fisa de cazare (HG 237/2001 actualizata) si Declaratia de Consimtamant pentru procesarea datelor personale (GDPR), in caz ca nu este deja. Documentele mentionate reprezinta obligativitate legala pentru unitatea hoteliera si nu se vor caza clienti care refuza sa semneze.',
+    gdpr: 'La momentul cazării, cliențiilor li se cere să completeze și semneze fișa de cazare (HG 237/2001 actualizată) și Declarația de Consimțămant pentru procesarea datelor personale (GDPR), în caz că nu este deja. Documentele menționate reprezintă obligativitate legală pentru unitatea hotelieră și nu se vor caza clienți care refuză să semneze.',
     roomClean: 'Pe perioada sejurului, se face curățenie zilnică la solicitarea clientului. Cel puțin o dată la trei zile se face curățenie generală. Pentru solicitări diferite vă rugăm să contactați Recepția.',
     lostObj: 'Obiectele uitate în camere se predau la Recepție de către cameriste și se anunță respectivii clienți imediat.',
     breakfast: 'Micul dejun se servește de luni până vineri în intervalul 07:00-10:30. Sâmbăta și duminica se poate cumpăra cafea la Receptie.',
@@ -57,16 +57,16 @@ export default {
     },
 
     titles: {
-      rooms2s: 'Cazare 2*',
-      rooms2sp: 'Cazare 2*+',
-      rooms3s: 'Cazare 3*',
+      rooms2s: 'Cazare ★★',
+      rooms2sp: 'Cazare ★★+',
+      rooms3s: 'Cazare ★★★',
     },
 
     info: {
       rooms2s: ['Camerele de 2* sunt de dimensiuni generoase, echipate standard, mobilier minimal, cu baie proprie cu duș, televizor LCD/LED, minibar, uscător de păr și internet wireless gratuit.', 'Apartamentele, sunt compuse din 2 încăperi separate prin ușă: prima cu 1 pat single, iar a doua cu 1 pat dublu. Baia este situată între ele, cu intrare din camera single. Doar încăperea a doua are televizor. Intrarea se face printr-o terasă exterioară.'],
       rooms2sp: ['Camerele sunt deschise din august 2017 și dispun de cele mai moderne servicii din unitatea noastră.', 'Camerele oferă servicii de 3*, dar se găsesc la mansarda (Etajul 4) corpului de 2*.', 'Față de camerele de 2* oferă suplimentar aer condiționat și seif.'],
       rooms3s: ['Camerele de 3* se găsesc în pavilionul secundar, fără Recepție, situat în spatele parcării.', 'Față de camerele de 2*, sunt echipate suplimentar cu aer condiționat.'],
-      noSmoking: 'Toate camerele sunt de nefumători. Pentru fumători recomandăm camerele cu balcon.',
+      noSmoking: 'Toate camerele sunt de nefumători. Pentru clienții fumători recomandăm camerele cu balcon.',
       sensors: 'Pentru siguranța dumneavoastră, toate camerele și holurile sunt dotate cu senzori de detecție a focului /fumului. Sabotarea senzorilor declanșează alarma în Recepție. Persoanele care sabotează senzorii vor fi evacuate fără a li se returna suma plătită.',
       fireSafety: 'Va rugăm să nu folosiți lumanări în camere, acestea prezintă pericol de incendiu.',
       powerSafety: 'La camerele din pavilionul de 3*, prizele de la capul patului sunt marcate pentru utilizare cu consumatori mici (telefoane, laptopuri..). Va rugăm să respectați indicațiile.',
@@ -141,6 +141,12 @@ export default {
     environment: 'Împreună pentru un mediu înconjurător sănătos!',
   },
 
+  photoGallery: {
+    room: 'Camera',
+    apt: 'Apartament',
+    bath: 'Grup Sanitar',
+  },
+
   company: {
     title: 'Informatii Firmă',
     name: 'S.C. 4 Anotimpuri Turism S.R.L.',
@@ -164,9 +170,11 @@ export default {
     },
     certification: {
       MDRT: 'Certificate Clasificare MDRT',
-      managerCEDES: 'Certificate Manager CEDES',
-      managerANTREC: 'Certificat Manager ANTREC',
-      qualityCEDES: 'Calitatea Serviciilor CEDES',
+      gallery: {
+        villa2s: 'Certificat Clasificare Vila Rosa ★★',
+        villa3s: 'Certificat Clasificare Vila Rosa ★★★',
+        restaurant: 'Certificat Clasificare Restaurant ★★★',
+      },
     },
   },
 

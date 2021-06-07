@@ -3,12 +3,12 @@
 
     <div>
       <q-parallax
-        src="~assets/Restaurant/restaurant_panorama.jpg"
+        src="Images/Restaurant/restaurant_panorama.jpg"
         :height="600"
         :speed="0.75"
         class=""
       >
-        <q-img src="~assets/Logo/sigla_vr_img@2x.png" style="max-width: 300px; margin-bottom: 250px"></q-img>
+        <q-img src="Logo/sigla_vr_img@2x.png" style="max-width: 300px; margin-bottom: 250px"></q-img>
       </q-parallax>
     </div>
 
@@ -40,7 +40,7 @@
           <div class="row justify-center">
             <prices-table></prices-table>
           </div>
-          <p class="section-subtitle">{{ $t('rooms.priceInfo.breakfast') }}</p>
+          <p class="section-notes">{{ $t('rooms.priceInfo.breakfast') }}</p>
         </div>
 
         <!-- Rooms Info area -->
@@ -53,7 +53,7 @@
             <info-box
               :header-icons="[ 'las la-star', 'las la-star' ]"
               header-color="text-red-10"
-              :icons-list="[ 'shower', 'hairdryer', 'lcd_tv', 'minibar' ]"
+              :icons-list="[ 'wifi', 'lcd_tv', 'hairdryer', 'minibar' ]"
               icons-color=""
               :text-list="$t('rooms.info.rooms2s')"
             ></info-box>
@@ -94,10 +94,10 @@
               <p class="col section-subtitle q-ma-none q-pa-md">{{ $t('rooms.info.fireSafety') }}</p>
             </div>
             <!-- Mind the power requirements -->
-            <div class="row items-center q-pt-md q-pl-md">
-              <q-icon name="las la-plug" size="xl" class="col-auto text-red-10 q-pa-md"></q-icon>
-              <p class="col section-subtitle q-ma-none q-pa-md">{{ $t('rooms.info.powerSafety') }}</p>
-            </div>
+<!--            <div class="row items-center q-pt-md q-pl-md">-->
+<!--              <q-icon name="las la-plug" size="xl" class="col-auto text-red-10 q-pa-md"></q-icon>-->
+<!--              <p class="col section-subtitle q-ma-none q-pa-md">{{ $t('rooms.info.powerSafety') }}</p>-->
+<!--            </div>-->
             <!-- NO extra beds -->
             <div class="row items-center q-pt-md q-pl-md">
               <q-icon name="las la-bed" size="xl" class="col-auto text-red-10 q-pa-md"></q-icon>
@@ -123,9 +123,9 @@
                     <p class="section-title">{{ $t('rooms.voucherVacation') }}</p>
           <q-separator class="q-mb-md"/>
           <div class="row justify-around">
-            <q-img src="~assets/Vouchers/logo-edenred.svg" alt="Edenred" style="width: 121px; height: 74px;"></q-img>
-            <q-img src="~assets/Vouchers/logo-up.png" alt="Up Romania" style="width: 73px; height: 83px;"></q-img>
-            <q-img src="~assets/Vouchers/logo-sodexo.png" alt="Sodexo" style="width: 152px; height:50px;"></q-img>
+            <q-img src="/Vouchers/logo-edenred.svg" alt="Edenred" style="width: 121px; height: 74px;"></q-img>
+            <q-img src="/Vouchers/logo-up.png" alt="Up Romania" style="width: 73px; height: 83px;"></q-img>
+            <q-img src="/Vouchers/logo-sodexo.png" alt="Sodexo" style="width: 152px; height:50px;"></q-img>
           </div>
         </div>
 
@@ -142,7 +142,6 @@
 </template>
 
 <script>
-import { i18n } from "boot/i18n";
 import textBox from 'components/TextBox.vue';
 import pricesTable from 'components/PricesTable.vue';
 import infoBox from 'components/InfoBox.vue';
@@ -188,6 +187,13 @@ export default {
 .section-subtitle2
   font-size: 1rem
   margin: 0
+
+.section-notes
+  font-size: 1rem
+  padding: 1.5rem 2rem 0rem 2rem
+  //margin: 0
+  color: #525252
+  overflow: auto
 
 .footer
   background-color: $blue-grey-2

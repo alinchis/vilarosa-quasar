@@ -22,6 +22,7 @@ module.exports = function (/* ctx */) {
     boot: [
 
       'i18n',
+      'LightBox',
     ],
 
     // https://v1.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
@@ -114,7 +115,7 @@ module.exports = function (/* ctx */) {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: `Vila Rosa`,
+        name: `Hotel Vila Rosa from Cluj-Napoca, Romania`,
         short_name: `Vila Rosa`,
         description: `Webpage for Vila Rosa - Cluj-Napoca.`,
         display: 'standalone',
