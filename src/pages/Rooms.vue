@@ -3,12 +3,12 @@
 
     <div>
       <q-parallax
-        src="Images/Restaurant/restaurant_panorama.jpg"
+        src="Images/Hotel/hotel_panorama_2@2x.jpg"
         :height="600"
         :speed="0.75"
         class=""
       >
-        <q-img src="Logo/sigla_vr_img@2x.png" style="max-width: 300px; margin-bottom: 250px"></q-img>
+        <q-img src="Logo/sigla_vr_bnb.png" style="max-width: 300px; margin-bottom: 0px"></q-img>
       </q-parallax>
     </div>
 
@@ -59,7 +59,7 @@
             ></info-box>
             <!-- 2*+ rooms -->
             <info-box
-              :header-icons="[ 'las la-star', 'las la-star', 'las la-star-half' ]"
+              :header-icons="[ 'las la-star', 'las la-star', 'las la-star-half-alt' ]"
               header-color="text-red-10"
               :icons-list="[ 'add_sign', 'ac', 'safe_box' ]"
               icons-color=""
@@ -145,8 +145,6 @@
 import textBox from 'components/TextBox.vue';
 import pricesTable from 'components/PricesTable.vue';
 import infoBox from 'components/InfoBox.vue';
-import companyBox from '../components/AboutUsCompany.vue';
-import authBox from '../components/AboutUsAuthoritiesBox';
 
 export default {
   name: 'OurServices',
@@ -157,7 +155,6 @@ export default {
       autoplay: true,
     }
   },
-
 }
 </script>
 

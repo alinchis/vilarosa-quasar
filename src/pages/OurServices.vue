@@ -8,7 +8,7 @@
         :speed="0.75"
         class=""
       >
-        <q-img src="Logo/sigla_vr_img@2x.png" style="max-width: 300px; margin-bottom: 250px"></q-img>
+        <q-img src="Logo/sigla_vr_bnb.png" style="max-width: 300px; margin-bottom: 0px"></q-img>
       </q-parallax>
     </div>
 

@@ -40,7 +40,18 @@ export default {
   },
 
   gdpr: {
-    title: 'Protecția datelor personale',
+    title: 'Protecția datelor personale (GDPR)',
+    message: 'Pagina de internet nu colectează date personale. Pentru funcționarea corespunzătoare a paginii, se salvează date de navigare (notificare GDPR, selecție limbă, pagina, tipul camerei, numărul camerei) în SessionStorage, în browser. Aceste date se șterg când se închide pagina.',
+    btnText: 'Inchide',
+  },
+
+  certification: {
+    MDRT: 'Certificate Clasificare MDRT',
+    gallery: {
+      villa2s: 'Certificat Clasificare Vila Rosa ★★',
+      villa3s: 'Certificat Clasificare Vila Rosa ★★★',
+      restaurant: 'Certificat Clasificare Restaurant ★★★',
+    },
   },
 
   rooms: {
@@ -58,8 +69,9 @@ export default {
 
     titles: {
       rooms2s: 'Cazare ★★',
-      rooms2sp: 'Cazare ★★+',
+      rooms2sp: 'Cazare ★★☆',
       rooms3s: 'Cazare ★★★',
+      roomsPhotos: 'Poze Camere',
     },
 
     info: {
@@ -167,14 +179,6 @@ export default {
       name: 'Raiffeisen Bank Cluj',
       account: 'RO38RZBR0000060012406397',
       socialCap: 'capital social 200RON',
-    },
-    certification: {
-      MDRT: 'Certificate Clasificare MDRT',
-      gallery: {
-        villa2s: 'Certificat Clasificare Vila Rosa ★★',
-        villa3s: 'Certificat Clasificare Vila Rosa ★★★',
-        restaurant: 'Certificat Clasificare Restaurant ★★★',
-      },
     },
   },
 

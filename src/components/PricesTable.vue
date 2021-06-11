@@ -15,7 +15,7 @@
         <th class="text-right">
           <q-icon name="las la-star"></q-icon>
           <q-icon name="las la-star"></q-icon>
-          <q-icon name="las la-star-half"></q-icon>
+          <q-icon name="las la-star-half-alt"></q-icon>
         </th>
         <th class="text-right">
           <q-icon name="las la-star"></q-icon>

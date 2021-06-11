@@ -1,5 +1,5 @@
 <template>
-  <div id="mapContainer" :style="cssVars()">
+  <div id="mapContainer">
     <MglMap :accessToken="accessToken" :mapStyle.sync="mapStyle">
       <MglNavigationControl position="top-right" />
       <MglGeolocateControl position="top-right" />
@@ -30,21 +30,11 @@ export default {
     this.mapbox = Mapbox;
   },
 
-  methods: {
-
-    cssVars() {
-      //https://www.telerik.com/blogs/passing-variables-to-css-on-a-vue-component
-      return {
-        "--height": window.innerHeight + "px",
-        "--width": window.innerWidth + "px",
-      };
-    },
-  },
 };
 </script>
 
 <style lang="sass" scoped>
 #mapContainer
-  height: var(--height)
-  width: var(--width)
+  height: 100vh
+  width: 100vw
 </style>

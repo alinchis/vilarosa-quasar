@@ -8,7 +8,7 @@
         :speed="0.75"
         class=""
       >
-        <q-img src="Logo/sigla_vr_img@2x.png" style="max-width: 300px; margin-bottom: 250px"></q-img>
+        <q-img src="Logo/sigla_vr_bnb.png" style="max-width: 300px; margin-bottom: 250px"></q-img>
       </q-parallax>
     </div>
 
@@ -82,7 +82,7 @@ export default {
 <style lang="sass" scoped>
 .menu-line
   background-color: darkred
-  //height: 5px
+  height: 5px
 
 .container
   display: flex

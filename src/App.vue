@@ -10,6 +10,7 @@ export default {
   created() {
     // set default language
     // localStorage.setItem('language', 'ro-ro');
-  }
+  },
+
 }
 </script>

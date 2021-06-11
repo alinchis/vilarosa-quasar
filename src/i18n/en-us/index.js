@@ -40,7 +40,18 @@ export default {
   },
 
   gdpr: {
-    title: 'Personal data protection',
+    title: 'Personal data protection (GDPR)',
+    message: 'The website does not collect personal data. For proper functioning, navigation data (GDPR notification flag, language selection, page, room type and room number for photo album) is saved in SessionStorage, in browser. This data is deleted automatically when closing the page.',
+    btnText: 'Close',
+  },
+
+  certification: {
+    MDRT: 'H&R Certification MDRT',
+    gallery: {
+      villa2s: 'Certificate of Classification Villa Rosa ★★',
+      villa3s: 'Certificate of Classification Villa Rosa ★★★',
+      restaurant: 'Certificate of Classification Restaurant ★★★',
+    },
   },
 
   rooms: {
@@ -58,8 +69,9 @@ export default {
 
     titles: {
       rooms2s: 'Rooms ★★',
-      rooms2sp: 'Rooms ★★+',
+      rooms2sp: 'Rooms ★★☆',
       rooms3s: 'Rooms ★★★',
+      roomsPhotos: 'Rooms Photos',
     },
 
     info: {
@@ -167,14 +179,6 @@ export default {
       name: 'Raiffeisen Bank Cluj',
       account: 'RO38RZBR0000060012406397',
       socialCap: 'social capital 200RON',
-    },
-    certification: {
-      MDRT: 'H&R Certification MDRT',
-      gallery: {
-        villa2s: 'Certificate of Classification Villa Rosa ★★',
-        villa3s: 'Certificate of Classification Villa Rosa ★★★',
-        restaurant: 'Certificate of Classification Restaurant ★★★',
-      },
     },
   },
 

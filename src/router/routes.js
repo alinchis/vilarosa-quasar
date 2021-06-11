@@ -2,14 +2,54 @@
 const routes = [
   {
     path: '/',
+    redirect:  { name: 'Rooms' },
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { name: 'AboutUs', path: 'aboutUs', component: () => import('pages/AboutUs.vue') },
-      // { path: 'certification', component: () => import('pages/Gallery.vue') },
-      { name: 'OurServices', path: 'ourServices', component: () => import('pages/OurServices.vue') },
-      { name: 'Rooms', path: 'rooms', component: () => import('pages/Rooms.vue') },
+
+      // about us
+      { name: 'AboutUs', path: 'aboutUs',
+        component: () => import('pages/AboutUs.vue'),
+        beforeEnter: (to, from, next) => {
+          // console.log('beforeEnter: AboutUs');
+          sessionStorage.setItem('routeName', 'AboutUs');
+          next();
+        }
+      },
+
+      // our services
+      { name: 'OurServices', path: 'ourServices',
+        component: () => import('pages/OurServices.vue'),
+        beforeEnter: (to, from, next) => {
+          // console.log('beforeEnter: OurServices');
+          sessionStorage.setItem('routeName', 'OurServices');
+          next();
+        }
+      },
+
+      // rooms
+      { name: 'Rooms', path: 'rooms',
+        component: () => import('pages/Rooms.vue'),
+        beforeEnter: (to, from, next) => {
+          // console.log('beforeEnter: Rooms');
+          sessionStorage.setItem('routeName', 'Rooms');
+          next();
+        }
+      },
+
+      // map
       { name: 'Map', path: 'map', component: () => import('pages/Map_mapbox.vue') },
-      { name: 'GDPR_RO', path: 'gdpr', component: () => import('pages/PDF.vue') },
+
+      // gdpr paths
+      { name: 'GDPRclient', path: 'gdprClient', component: () => import('pages/GDPRclient.vue') },
+      { name: 'GDPRgroup', path: 'gdprGroup', component: () => import('pages/GDPRgroup.vue') },
+
+      // certification path
+      { name: 'Certification', path: 'certification', component: () => import('pages/Certification.vue') },
+
+      // photo albums paths
+      { name: 'Albums', path: 'albums', component: () => import('components/PhotoAlbums.vue') },
+      { name: 'Gallery', path: 'gallery', component: () => import('components/PhotoGallery.vue') },
+      { name: 'RoomPhotos', path: 'roomPhotos', component: () => import('components/PhotoViewer.vue') },
     ]
   },
 
@@ -17,7 +57,8 @@ const routes = [
   // but you can also remove it
   {
     path: '*',
-    component: () => import('pages/Error404.vue')
+    // component: () => import('pages/Error404.vue')
+    redirect: { name: 'Rooms' }
   }
 ]
 
