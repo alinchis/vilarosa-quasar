@@ -13,7 +13,7 @@ export default {
 
   aboutUs: {
     welcome: 'Despre noi',
-    open: 'Vila Rosa este deschisă din ianuarie 2001. SC 4 Anotimpuri Turism SRL a preluat afacerea in 2010.',
+    open: 'Vila Rosa este deschisă din ianuarie 2001. SC 4 Anotimpuri Turism SRL a preluat afacerea în 2010.',
     services: 'Oferim servicii de cazare, categoria 2 și 3 stele, și de servire a micului dejun. Activitatea de cazare se desfășoară în două clădiri situate în aceeași incintă, iar Micul Dejun se servește în clădirea principală, corpul de 2 stele.',
     location: 'Ne găsiți în Cluj-Napoca, Cartierul Mănăștur (vestul orașului, ieșirea spre Oradea), într-o zonă de case și ateliere mici, în apropiere de Cimitirul Mănăștur.',
     noise: 'În zilele lucrătoare există puțină agitație, dar pe timp de noapte este foarte liniște. Fac excepție avioanele, care se aud în tot orașul.',
@@ -41,7 +41,10 @@ export default {
 
   gdpr: {
     title: 'Protecția datelor personale (GDPR)',
-    message: 'Pagina de internet nu colectează date personale. Pentru funcționarea corespunzătoare a paginii, se salvează date de navigare (notificare GDPR, selecție limbă, pagina, tipul camerei, numărul camerei) în SessionStorage, în browser. Aceste date se șterg când se închide pagina.',
+    message: [
+      'Pagina de internet nu colectează date personale.',
+      'Pentru funcționarea corespunzătoare a paginii, se salvează în browser (SessionStorage) date de navigare (notificare GDPR, selecție limbă, pagina, tipul camerei, numărul camerei). Aceste date se șterg când se închide pagina.',
+    ],
     btnText: 'Inchide',
   },
 
@@ -164,16 +167,24 @@ export default {
     name: 'S.C. 4 Anotimpuri Turism S.R.L.',
     id: 'RO26403597',
     orcId: 'J12/48/2010',
-    country: 'România',
-    postalCode: '400664',
-    address: 'Cluj-Napoca, Str. Frunzişului nr.4',
+    address: {
+      country: 'România',
+      city: 'Cluj-Napoca',
+      postalCode: '400664',
+      street: 'Str. Frunzişului nr.4',
+    },
     telephone: '+40.264.425.507',
     mobile: '+40.747.111.961',
     email: {
       reception: 'receptie@vilarosa.ro',
+      chiefReception: 'sef.receptie@vilarosa.ro',
       office: 'office@vilarosa.ro',
-      GDPR: 'gdpr@vilarosa.ro',
+      accounting: 'contabilitate@vilarosa.ro',
+      reviews: 'recenzii@vilarosa.ro',
+      gdpr: 'gdpr@vilarosa.ro',
     },
+    tooltipMsg: 'click pentru copiere',
+    copyToClipboardMsg: 'a fost copiat in memorie',
     website: 'www.vilarosa.ro',
     bank: {
       name: 'Raiffeisen Bank Cluj',

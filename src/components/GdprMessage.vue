@@ -2,10 +2,15 @@
   <div
     v-if="gdprFlag"
     class="q-pa-md q-gutter-sm fixed-bottom"
+    style="padding-bottom: 35px;"
   >
     <q-banner rounded class="bg-purple-8 text-white">
       <p class="gdpr-title">{{ $t('gdpr.title') }}</p>
-      <p class="gdpr-msg">{{ $t('gdpr.message') }}</p>
+      <p
+        v-for="(msg, index) in $t('gdpr.message')"
+        :key="index"
+        class="gdpr-msg"
+      >{{ msg }}</p>
       <template v-slot:action>
         <q-btn
           flat

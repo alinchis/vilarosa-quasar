@@ -1,5 +1,5 @@
 <template>
-  <q-card class="company-card bg-transparent" flat>
+  <q-card class="company-card bg-transparent col-xs-12 col-sm-6 col-md-4" flat>
     <q-card-section class="">
       <q-icon
         v-for="(iconItem, iconIndex) in iconList"
@@ -15,6 +15,7 @@
         style="width: 100%"
         v-for="(textItem, textIndex) in textContent"
         :key="'t' + textIndex"
+        class="body-text"
       >
         {{ textItem }}
       </div>
@@ -31,10 +32,16 @@ export default {
 
 <style lang="sass" scoped>
 .company-card
-  //background-color: $blue-grey-2
-  //width: 100%
-  min-width: 250px
-  max-width: 440px
+  //min-width: 250px
+  //max-width: 490px
   color: #525252
-  margin: 0.5rem
+  //margin: 0.5rem
+
+.body-text
+  font-size: 0.9rem
+
+//@media (max-width: $breakpoint-sm-max)
+//  .company-card
+//    max-width: 405px
+
 </style>

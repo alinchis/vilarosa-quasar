@@ -3,7 +3,9 @@
     <MglMap :accessToken="accessToken" :mapStyle.sync="mapStyle">
       <MglNavigationControl position="top-right" />
       <MglGeolocateControl position="top-right" />
-      <MglMarker :coordinates="center" color="darkred" />
+      <MglMarker :coordinates="center" color="darkred">
+        <img slot="marker" src="/Logo/vr_map-marker.png" class="marker"/>
+      </MglMarker>
     </MglMap>
   </div>
 </template>
@@ -37,4 +39,12 @@ export default {
 #mapContainer
   height: 100vh
   width: 100vw
+
+.marker
+  background-size: cover
+  padding-bottom: 170px
+  //width: 250px
+  //height: 100px
+  //cursor: pointer
+
 </style>

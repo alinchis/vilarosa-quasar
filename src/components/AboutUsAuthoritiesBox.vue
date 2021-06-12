@@ -1,24 +1,35 @@
 <template>
-  <q-card class="auth-card bg-transparent" flat>
+  <q-card class="auth-card bg-transparent col-xs-12 col-sm-4 q-ma-xs-sm" flat>
+
+    <!-- header -->
     <q-card-section>
+
+      <!-- title / acronym -->
       <div class="item-title">{{ auth.acronym }}</div>
-      <div :id="'auth-box-' + idIndex" class="item-label" :style="style">
+
+      <!-- subtitle -->
+      <div :id="'auth-box-' + idIndex" class="item-subtitle">
         {{ auth.title }}
-<!--        <q-resize-observer @resize="onResize" />-->
       </div>
-      </q-card-section>
-<!--    <q-separator inset />-->
+
+    </q-card-section>
+
+    <!-- body -->
     <q-card-section class="q-pt-none">
+
+      <!-- telephone -->
       <div class="item-label">
         <q-icon name="las la-phone" class="auth-icon"></q-icon>
         {{ auth.telephone }}
       </div>
 
+      <!-- mail -->
       <div v-if="auth.mail" class="item-label">
         <q-icon name="las la-at" class="auth-icon"></q-icon>
         {{ auth.mail }}
       </div>
 
+      <!-- website -->
       <div v-if="auth.website" class="item-label">
         <q-icon name="las la-globe-europe" class="auth-icon"></q-icon>
         {{ auth.website }}
@@ -35,12 +46,6 @@ const { height } = dom;
 export default {
   name: "AboutUsAuthoritiesBox",
   props: [ 'idIndex', 'auth' ],
-
-  data () {
-    return {
-      style: { minHeight: '62px' },
-    }
-  },
 
   // methods: {
   //   onResize (size) {
@@ -60,18 +65,27 @@ export default {
 
 <style lang="sass" scoped>
 .auth-card
-  width: 100%
-  max-width: 400px
-  margin: 0.5rem
+  //width: 100%
+  //max-width: 400px
+  //margin: 0.5rem
 
 .item-title
   font-size: 1.1rem
   color: dimgray
 
+.item-subtitle
+  font-size: 0.9rem
+  color: gray
+  min-height: 65px
+
 .item-label
-  font-size: 0.85rem
+  font-size: 0.9rem
   color: gray
 
 .auth-icon
   color: steelblue
+
+@media (max-width: $breakpoint-sm-max)
+  .item-subtitle
+    min-height: 0
 </style>

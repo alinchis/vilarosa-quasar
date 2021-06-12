@@ -22,13 +22,17 @@
       <!-- page -->
       <router-view/>
 
+<!--      <q-page-sticky position="right" :offset="[18, 18]">-->
+<!--        <q-btn round color="accent" icon="arrow_back" class="rotate-45" />-->
+<!--      </q-page-sticky>-->
+
       <!-- fab buttons -->
-      <q-page-sticky v-if="showFabs" style="margin-right: 20px; margin-bottom: 100px;">
-        <div class="column">
+      <q-page-sticky position="right" v-if="showFabs" class="nav-fabs-sticky">
+        <div class="nav-fabs-box column">
           <q-btn
             fab
             icon="las la-camera"
-            color="accent"
+            color="primary"
             :hide-label="hideLabels"
             @click="openGallery('certification-gallery', 0)"
             class="q-mt-md"
@@ -38,7 +42,7 @@
             v-if="this.language === 'ro-ro'"
             icon="las la-user-check"
             direction="left"
-            color="accent"
+            color="primary"
             :hide-label="hideLabels"
             class="q-mt-md"
           >
@@ -50,7 +54,7 @@
             v-if="this.language !== 'ro-ro'"
             fab
             icon="las la-user-check"
-            color="accent"
+            color="primary"
             :hide-label="hideLabels"
             @click="$router.push({ name: 'GDPRclient' })"
             class="q-mt-md"
@@ -59,7 +63,7 @@
           <q-btn
             fab
             icon="las la-certificate"
-            color="accent"
+            color="primary"
             :hide-label="hideLabels"
             @click="$router.push({ name: 'Certification' })"
             class="q-mt-md"
@@ -84,7 +88,6 @@ export default {
   data () {
     return {
       language: this.$root.$i18n.locale,
-      // showHeader: true,
       hideLabels: false,
     }
   },
@@ -94,7 +97,10 @@ export default {
       // console.log(this.$route.name);
       // if current page is one of the following return true, else false
       return this.$route.name === 'AboutUs' || this.$route.name === 'OurServices' || this.$route.name === 'Rooms';
+    },
 
+    gdprFlag() {
+      return this.$q.sessionStorage.getItem('gdprFlag');
     },
 
     showHeader() {
@@ -102,14 +108,6 @@ export default {
       return this.$route.name === 'AboutUs' || this.$route.name === 'OurServices' || this.$route.name === 'Rooms' || this.$route.name === 'Map';
     },
 
-    // gdprFlag: {
-    //   get() {
-    //     return this.$q.sessionStorage.getItem('gdprFlag');
-    //   },
-    //   set(value) {
-    //     this.$q.sessionStorage.set('gdprFlag', value);
-    //   }
-    // }
   },
 
   methods: {
@@ -128,7 +126,14 @@ export default {
   },
 
   created() {
+    // set default route to Rooms, in sessionStorage
+    const currentRoute = sessionStorage.getItem('routeName');
+    console.log('currentRoute: ' + currentRoute);
+    console.log('currentRoute: ' + currentRoute !== 'AboutUs');
+    if (currentRoute !== 'AboutUs' || currentRoute !== 'OurService' || currentRoute !== 'Rooms') sessionStorage.setItem('routeName', 'Rooms');
+    // save language to sessionStorage
     this.$q.sessionStorage.set('language', this.language);
+    // set GDPR Message flag to true /show message
     this.$q.sessionStorage.set('gdprFlag', true);
   },
 
@@ -139,6 +144,20 @@ export default {
 <style lang="sass" scoped>
 .navBtnGroup
   margin-top: 0px
+
+.nav-fabs-sticky
+  //padding-top: 100px
+
+@media (hover)
+  .nav-fabs-sticky
+    position: fixed
+    margin-right: 20px
+    top: 0px
+
+@media (not hover)
+  .nav-fabs-sticky
+    margin-right: 10px
+    margin-bottom: 20px
 
 </style>
 

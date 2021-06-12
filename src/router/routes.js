@@ -37,7 +37,14 @@ const routes = [
       },
 
       // map
-      { name: 'Map', path: 'map', component: () => import('pages/Map_mapbox.vue') },
+      { name: 'Map', path: 'map',
+        component: () => import('pages/Map_mapbox.vue'),
+        // beforeEnter: (to, from, next) => {
+        //   // console.log('beforeEnter: Rooms');
+        //   sessionStorage.setItem('routeName', 'Map');
+        //   next();
+        // }
+      },
 
       // gdpr paths
       { name: 'GDPRclient', path: 'gdprClient', component: () => import('pages/GDPRclient.vue') },
@@ -47,9 +54,9 @@ const routes = [
       { name: 'Certification', path: 'certification', component: () => import('pages/Certification.vue') },
 
       // photo albums paths
-      { name: 'Albums', path: 'albums', component: () => import('components/PhotoAlbums.vue') },
-      { name: 'Gallery', path: 'gallery', component: () => import('components/PhotoGallery.vue') },
-      { name: 'RoomPhotos', path: 'roomPhotos', component: () => import('components/PhotoViewer.vue') },
+      { name: 'Albums', path: 'albums', component: () => import('pages/PhotoAlbums.vue') },
+      { name: 'Gallery', path: 'gallery', component: () => import('pages/PhotoGallery.vue') },
+      { name: 'RoomPhotos', path: 'roomPhotos', component: () => import('pages/PhotoViewer.vue') },
     ]
   },
 

@@ -11,7 +11,7 @@
     </div>
 
     <!-- return button -->
-    <q-page-sticky v-if="!showFabs" style="margin-right: 20px; margin-bottom: 100px;">
+    <q-page-sticky v-if="!showFabs" style="margin-right: 20px; margin-bottom: 200px;">
       <div class="column">
         <q-btn
           fab

@@ -41,7 +41,10 @@ export default {
 
   gdpr: {
     title: 'Personal data protection (GDPR)',
-    message: 'The website does not collect personal data. For proper functioning, navigation data (GDPR notification flag, language selection, page, room type and room number for photo album) is saved in SessionStorage, in browser. This data is deleted automatically when closing the page.',
+    message: [
+      'The website does not collect personal data.',
+      'For proper functioning, navigation data (GDPR notification flag, language selection, page, room type and room number for photo album) is saved in SessionStorage, in browser. This data is deleted automatically when closing the page.',
+    ],
     btnText: 'Close',
   },
 
@@ -164,16 +167,24 @@ export default {
     name: 'S.C. 4 Anotimpuri Turism S.R.L.',
     id: 'RO26403597',
     orcId: 'J12/48/2010',
-    country: 'Romania',
-    postalCode: '400664',
-    address: 'Cluj-Napoca, No.4 Frunzişului St.',
+    address: {
+      country: 'Romania',
+      city: 'Cluj-Napoca',
+      postalCode: '400664',
+      street: 'No.4 Frunzişului St.',
+    },
     telephone: '+40.264.425.507',
     mobile: '+40.747.111.961',
     email: {
       reception: 'receptie@vilarosa.ro',
+      chiefReception: 'sef.receptie@vilarosa.ro',
+      accounting: 'contabilitate@vilarosa.ro',
+      reviews: 'recenzii@vilarosa.ro',
       office: 'office@vilarosa.ro',
-      GDPR: 'gdpr@vilarosa.ro',
+      gdpr: 'gdpr@vilarosa.ro',
     },
+    tooltipMsg: 'click to copy',
+    copyToClipboardMsg: 'was copied to clipboard',
     website: 'www.vilarosa.ro',
     bank: {
       name: 'Raiffeisen Bank Cluj',

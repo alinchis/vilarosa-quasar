@@ -125,7 +125,7 @@
 </template>
 
 <script>
-import Carousel from './Carousel';
+import Carousel from 'components/Carousel';
 
 export default {
   name: "PhotoViewer",
