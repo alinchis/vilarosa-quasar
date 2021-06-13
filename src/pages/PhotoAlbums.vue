@@ -225,7 +225,13 @@ export default {
       // console.log('@PhotoAlbums.vue :: close album');
       this.$q.sessionStorage.remove('roomType');
       // return to page where albums were opened
-      this.$router.push({ name: sessionStorage.routeName });
+      if(sessionStorage.routeName) {
+        this.$router.push({ name: sessionStorage.routeName });
+        // if user loaded directly a secondary page, no routeName is saved in sessionStorage, route to 'Rooms' page
+      } else {
+        this.$router.push({ name: 'Rooms' });
+      }
+
     },
   },
 

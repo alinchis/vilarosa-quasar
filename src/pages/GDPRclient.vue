@@ -1,5 +1,5 @@
 <template>
-  <div class="q-pa-md bg-grey-9 row justify-center">
+  <div class="container q-pa-md bg-grey-9 row justify-center">
     <div class="column fit" style="max-width: 800px">
       <q-img
         v-for="(item, index) in gdprMedia"
@@ -11,22 +11,27 @@
     </div>
 
     <!-- return button -->
-    <q-page-sticky v-if="!showFabs" style="margin-right: 20px; margin-bottom: 200px;">
+    <q-page-sticky v-if="!showFabs" :position="fabPosition" :offset="[10, 132]">
       <div class="column">
         <q-btn
           fab
           icon="las la-undo-alt"
-          color="accent"
+          color="blue-8"
           :hide-label="hideLabels"
-          @click="$router.push({ name: currentPage })"
+          @click="closePage"
           class="q-mt-md"
         ></q-btn>
+      </div>
+    </q-page-sticky>
 
+    <!-- download button -->
+    <q-page-sticky v-if="!showFabs" position="top-right" :offset="[10, 10]">
+      <div>
         <q-btn
           v-if="this.$root.$i18n.locale === 'ro-ro'"
           fab
           icon="las la-file-download"
-          color="accent"
+          color="blue-8"
           :hide-label="hideLabels"
           class="q-mt-md"
 
@@ -37,7 +42,7 @@
           v-if="this.$root.$i18n.locale !== 'ro-ro'"
           fab
           icon="las la-file-download"
-          color="accent"
+          color="blue-8"
           :hide-label="hideLabels"
           class="q-mt-md"
 
@@ -99,8 +104,9 @@ export default {
       return false;
     },
 
-    currentPage() {
-      return sessionStorage.getItem('routeName');
+    fabPosition() {
+      // console.log(this.$q.screen.lt.sm);
+      return this.$q.screen.lt.sm ? 'bottom-right' : 'right';
     },
   },
 
@@ -117,15 +123,23 @@ export default {
         console.log('Error: ' + status)
       }
     },
+
+    closePage: function () {
+      // return to page where gdpr page was opened
+      if(sessionStorage.routeName) {
+        this.$router.push({ name: sessionStorage.routeName });
+        // if user loaded directly a secondary page, no routeName is saved in sessionStorage, route to 'Rooms' page
+      } else {
+        this.$router.push({ name: 'Rooms' });
+      }
+    },
   },
 }
 </script>
 
 <style lang="sass" scoped>
 .container
-  display: flex
-  justify-content: center
-  align-items: center
+  padding-right: 36px
 
 .certification
   margin: 10px
