@@ -4,9 +4,9 @@
     <div>
       <q-parallax
         src="Images/VilaRosa/vr_panorama_6.jpg"
-        :height="600"
+        :height="$q.screen.width > 1024 ? 600 : 450"
         :speed="0.75"
-        class=""
+        class="parallax"
       >
         <q-img src="Logo/sigla_vr_bnb.png" class="parallax-logo"></q-img>
       </q-parallax>
@@ -33,7 +33,7 @@
 
           <p class="section-title">{{ $t('company.name') }}</p>
           <q-separator />
-          <company-box v-on:click-copy="showCopyBanner"></company-box>
+          <company-box></company-box>
 
           <!-- Authorities area -->
           <p class="section-title">{{ $t('authorities.title') }}</p>
@@ -47,13 +47,6 @@
 
       </div>
     </div>
-
-    <q-banner
-      v-if="copyBannerFlag"
-      class="clipboard-banner bg-green fixed-bottom text-white text-center"
-    >
-      <b>' {{ copyBannerText }} '</b> {{ $t('company.copyToClipboardMsg') }}.
-    </q-banner>
 
     <!-- footer -->
     <div class="footer">
@@ -78,26 +71,12 @@ export default {
       copyBannerText: '',
     }
   },
-
-  methods: {
-    showCopyBanner(value) {
-      // set banner text
-      this.copyBannerText = value;
-      // show copy to clipboard message banner
-      this.copyBannerFlag = true;
-      // hide message banner after 1s
-      setTimeout(() => {
-        this.copyBannerFlag = false;
-      },1500)
-
-    }
-  }
 }
 </script>
 
 <style lang="sass" scoped>
 .parallax-logo
-  max-width: 250px
+  max-width: 350px
   margin-bottom: 250px
 
 .menu-line
@@ -133,9 +112,6 @@ export default {
   margin: 2rem 2rem 0rem 2rem
   padding: 0
 
-.clipboard-banner
-  font-size: 2rem
-
 .footer
   background-color: $blue-grey-2
   font-size: 0.75rem
@@ -143,20 +119,30 @@ export default {
   text-align: center
   padding: 5px
 
-@media (width <= 1024px)
+@media (width <= 1024px) and (width > 768px)
+  .parallax-logo
+    max-width: 300px
+    margin-bottom: 100px
+
   .about-us-container
     padding: 2rem 2rem 2rem 2rem
 
-@media (width <= 768px)
+@media (width <= 768px) and (width > 420px)
+  .parallax-logo
+    max-width: 250px
+    margin-bottom: 100px
+
+  .about-us-container
+    padding: 2rem 2rem 2rem 2rem
 
 
 @media (width <= 420px)
   .parallax-logo
     max-width: 200px
-    margin-bottom: 250px
+    margin-bottom: 100px
 
   .about-us-container
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem
+    padding: 0.5rem 0.5rem 1.5rem 0.5rem
 
   .section-title-first
     font-size: 1.3rem

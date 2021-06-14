@@ -49,7 +49,7 @@ export default {
   },
 
   certification: {
-    MDRT: 'H&R Certification MDRT',
+    title: 'H&R Certification MDRT',
     gallery: {
       villa2s: 'Certificate of Classification Villa Rosa ★★',
       villa3s: 'Certificate of Classification Villa Rosa ★★★',
@@ -61,13 +61,10 @@ export default {
     welcome: 'Welcome!',
     recPriceTitle: 'Reception Prices',
     noBreakfast: 'w/o Breakfast',
-    roomsInfoTitle: 'Rooms Info',
 
     reservations: {
       title: 'Reservations',
-      text1: 'For reservations please contact Reception on the phone ',
-      text2: ' or email ',
-      text3: '.'
+      text: 'For reservations please contact Reception on the phone or email:',
     },
 
     titles: {
@@ -77,10 +74,15 @@ export default {
       roomsPhotos: 'Rooms Photos',
     },
 
-    info: {
+    services: {
+      title: 'Services Info',
       rooms2s: ['The 2* rooms are generous in size, with minimal furniture, own bath, LCD/LED TV, minibar, hairdryer and free wireless internet.', 'The aparments, are composed of two rooms separated by door: the first room holds 1 single bed and the second 1 double bed. The bathroom is between the two, connected to the single room. Only the second room has TV. One enters the apartment traversing an exterior terace.'],
       rooms2sp: ['The rooms are opened since august 2017 and represent the most modern services we can offer, at this time.', 'They are similar to 3* rooms, but are located at the 4th floor of the 2* building.', 'In addition to 2* services, they provide air conditioning and safe box.'],
       rooms3s: ['The 3* rooms are located in a separate building, without Reception, next to the parking.', 'In comparison to 2* rooms, they are equipped with air conditioning.'],
+    },
+
+    important: {
+      title: 'Important',
       noSmoking: 'All our rooms are non-smoking rooms. We recommend our smoker clients to request rooms with balcony.',
       sensors: 'For your safety, all our rooms and hallways have fire /smoke detectors. Tempering with a sensor will trigger an alarm in the Reception. In case of sensor tempering, we will evacuate the responsible clients without reimbursement.',
       fireSafety: 'Please do not use candles, they pose a serious fire hazard.',
@@ -114,7 +116,7 @@ export default {
       rooms2sp: {
         sglRoom: '125 RON',
         dblRoom: '140 RON',
-        dbbRoom: '140 RON',
+        dbbRoom: '',
         triRoom: '180 RON',
         apt: '',
       },
@@ -132,9 +134,9 @@ export default {
 
     priceInfo: {
       title: 'Price Info',
-      notes: 'All prices are displayed in local currency ( Romanian Leu / RON ), do not include Breakfast, but include all taxes (hotel tax, VAT 5%) and are active starting the 20th of January 2020. These prices may change, but we will provide our services to clients at the confirmed price.',
+      notes: 'All prices are displayed in local currency ( Romanian LEU / RON ), do not include Breakfast, but include all taxes (hotel tax, VAT 5%) and are active starting the 20th of January 2020. These prices may change, but we will provide our services to clients at the confirmed price.',
       rooms: 'The prices are calculated given for room type /hotel day. Single, Double and Triple refer to the places available for that room type, one, two or three people. We will acommodate no more people per room than the available places. ',
-      breakfast: 'Breakfast price is 25 RON /person (including VAT 5%).',
+      breakfast: 'Breakfast price is 25 LEI /person (including VAT 5%).',
     },
   },
 
@@ -157,6 +159,7 @@ export default {
   },
 
   photoGallery: {
+    title: 'Photo Gallery',
     room: 'Room',
     apt: 'Apartment',
     bath: 'Bathroom',

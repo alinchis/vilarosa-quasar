@@ -155,7 +155,7 @@
 </template>
 
 <script>
-import { Notify } from 'quasar'
+// import { Notify } from 'quasar'
 import { copyToClipboard } from 'quasar'
 
 export default {
@@ -206,6 +206,7 @@ export default {
     font-size: 0.9rem
     color: gray
     transition: background-color .5s
+    border-radius: 10px
 
   .item-text
     margin-left: 0.5rem

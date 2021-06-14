@@ -4,7 +4,18 @@
       <MglNavigationControl position="top-right" />
       <MglGeolocateControl position="top-right" />
       <MglMarker :coordinates="center" color="darkred">
-        <img slot="marker" src="/Logo/vr_map-marker.png" class="marker"/>
+        <img
+          v-if="this.$q.platform.is.desktop"
+          slot="marker"
+          src="/Logo/vr_map-marker.png"
+          style="padding-bottom: 170px"
+        />
+        <img
+          v-else
+          slot="marker"
+          src="/Logo/vr_map-marker.png"
+          style="padding-bottom: 130px; width: 50%;"
+        />
       </MglMarker>
     </MglMap>
   </div>
@@ -39,12 +50,5 @@ export default {
 #mapContainer
   height: 100vh
   width: 100vw
-
-.marker
-  background-size: cover
-  padding-bottom: 170px
-  //width: 250px
-  //height: 100px
-  //cursor: pointer
 
 </style>

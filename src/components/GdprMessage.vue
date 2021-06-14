@@ -1,8 +1,7 @@
 <template>
   <div
     v-if="gdprFlag"
-    class="q-pa-md q-gutter-sm fixed-bottom"
-    style="padding-bottom: 35px;"
+    class="gdpr-container q-pa-md fixed-bottom"
   >
     <q-banner rounded class="bg-purple-8 text-white">
       <p class="gdpr-title">{{ $t('gdpr.title') }}</p>
@@ -49,6 +48,11 @@ export default {
 <style lang="sass" scoped>
 .navBtnGroup
   margin-top: 0px
+
+.gdpr-container
+  padding-bottom: 35px
+  max-width: 1020px
+  margin: 0 auto
 
 .gdpr-title
   font-size: 1.2rem

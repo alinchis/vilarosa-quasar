@@ -49,7 +49,7 @@ export default {
   },
 
   certification: {
-    MDRT: 'Certificate Clasificare MDRT',
+    title: 'Certificate Clasificare MDRT',
     gallery: {
       villa2s: 'Certificat Clasificare Vila Rosa ★★',
       villa3s: 'Certificat Clasificare Vila Rosa ★★★',
@@ -61,13 +61,10 @@ export default {
     welcome: 'Bine ați venit!',
     recPriceTitle: 'Tarife Recepție',
     noBreakfast: 'fără Mic Dejun',
-    roomsInfoTitle: 'Info Camere',
 
     reservations: {
       title: 'Rezervări',
-      text1: 'Pentru rezervări vă rugăm să contactați Recepția la telefon ',
-      text2: ' sau pe email ',
-      text3: '.'
+      text: 'Pentru rezervări vă rugăm să contactați Recepția la telefon sau pe email:',
     },
 
     titles: {
@@ -77,13 +74,18 @@ export default {
       roomsPhotos: 'Poze Camere',
     },
 
-    info: {
+    services: {
+      title: 'Info Servicii',
       rooms2s: ['Camerele de 2* sunt de dimensiuni generoase, echipate standard, mobilier minimal, cu baie proprie cu duș, televizor LCD/LED, minibar, uscător de păr și internet wireless gratuit.', 'Apartamentele, sunt compuse din 2 încăperi separate prin ușă: prima cu 1 pat single, iar a doua cu 1 pat dublu. Baia este situată între ele, cu intrare din camera single. Doar încăperea a doua are televizor. Intrarea se face printr-o terasă exterioară.'],
-      rooms2sp: ['Camerele sunt deschise din august 2017 și dispun de cele mai moderne servicii din unitatea noastră.', 'Camerele oferă servicii de 3*, dar se găsesc la mansarda (Etajul 4) corpului de 2*.', 'Față de camerele de 2* oferă suplimentar aer condiționat și seif.'],
+      rooms2sp: ['Camerele sunt deschise din august 2017 și dispun de cele mai moderne servicii din unitatea noastră.', 'Oferă servicii de 3*, dar se găsesc la mansarda (Etajul 4) corpului de 2*.', 'Față de camerele de 2* oferă suplimentar aer condiționat și seif.'],
       rooms3s: ['Camerele de 3* se găsesc în pavilionul secundar, fără Recepție, situat în spatele parcării.', 'Față de camerele de 2*, sunt echipate suplimentar cu aer condiționat.'],
+    },
+
+    important: {
+      title: 'Important',
       noSmoking: 'Toate camerele sunt de nefumători. Pentru clienții fumători recomandăm camerele cu balcon.',
-      sensors: 'Pentru siguranța dumneavoastră, toate camerele și holurile sunt dotate cu senzori de detecție a focului /fumului. Sabotarea senzorilor declanșează alarma în Recepție. Persoanele care sabotează senzorii vor fi evacuate fără a li se returna suma plătită.',
-      fireSafety: 'Va rugăm să nu folosiți lumanări în camere, acestea prezintă pericol de incendiu.',
+      sensors: 'Pentru siguranța dumneavoastră, toate camerele și holurile sunt dotate cu senzori de detecție a focului /fumului. Sabotarea senzorilor declanșează alarma în Recepție.',
+      fireSafety: 'Va rugăm să nu folosiți lumânări în camere, acestea prezintă pericol de incendiu.',
       powerSafety: 'La camerele din pavilionul de 3*, prizele de la capul patului sunt marcate pentru utilizare cu consumatori mici (telefoane, laptopuri..). Va rugăm să respectați indicațiile.',
       noExtraBeds: 'Nu se oferă paturi suplimentare.',
     },
@@ -105,24 +107,24 @@ export default {
     recPrices: {
       rooms2s: {
         sglRoom: '',
-        dblRoom: '120 RON',
-        dbbRoom: '120 RON',
-        triRoom: '160 RON',
-        apt: '180 RON',
+        dblRoom: '120 LEI',
+        dbbRoom: '120 LEI',
+        triRoom: '160 LEI',
+        apt: '180 LEI',
       },
 
       rooms2sp: {
-        sglRoom: '125 RON',
-        dblRoom: '140 RON',
-        dbbRoom: '140 RON',
-        triRoom: '180 RON',
+        sglRoom: '125 LEI',
+        dblRoom: '140 LEI',
+        dbbRoom: '',
+        triRoom: '180 LEI',
         apt: '',
       },
 
       rooms3s: {
-        sglRoom: '125 RON',
-        dblRoom: '140 RON',
-        dbbRoom: '140 RON',
+        sglRoom: '125 LEI',
+        dblRoom: '140 LEI',
+        dbbRoom: '140 LEI',
         triRoom: '',
         apt: '',
       }
@@ -132,9 +134,9 @@ export default {
 
     priceInfo: {
       title: 'Info Tarife',
-      notes: 'Tarifele de cazare afișate sunt exprimate în lei, fără Mic Dejun, includ toate taxele (taxa hotelieră, TVA 5%) și sunt valabile începând cu data de 20 ianuarie 2020. Aceste tarife pot suferi modificări, dar rezervările se onorează la tarifele comunicate în scris (e-mail, sms).',
+      notes: 'Tarifele de cazare afișate sunt exprimate în LEI, fără Mic Dejun, includ toate taxele (taxa hotelieră, TVA 5%) și sunt valabile începând cu data de 20 ianuarie 2020. Aceste tarife pot suferi modificări, dar rezervările se onorează la tarifele comunicate în scris (e-mail, sms).',
       rooms: 'Tarifele de cazare sunt calculate pentru cameră /zi hotelieră. Single, Double și Triple reprezintă numărul de locuri disponibile în camera respectivă, respectiv una, două sau trei persoane. Nu se va caza în camere un număr de persoane mai mare decât numărul de locuri disponibile.',
-      breakfast: 'Tariful pentru Mic Dejun este de 25 RON /persoană (include TVA 5%).',
+      breakfast: 'Tariful pentru Mic Dejun este de 25 LEI /persoană (include TVA 5%).',
     },
   },
 
@@ -157,6 +159,7 @@ export default {
   },
 
   photoGallery: {
+    title: 'Galerie Foto',
     room: 'Camera',
     apt: 'Apartament',
     bath: 'Grup Sanitar',

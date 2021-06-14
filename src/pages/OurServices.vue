@@ -4,21 +4,22 @@
     <div>
       <q-parallax
         src="Images/Restaurant/restaurant_panorama.jpg"
-        :height="600"
+        :height="$q.screen.width > 1024 ? 600 : 450"
         :speed="0.75"
         class=""
       >
-        <q-img src="Logo/sigla_vr_bnb.png" style="max-width: 300px; margin-bottom: 0px"></q-img>
+        <q-img src="Logo/sigla_vr_bnb.png" class="parallax-logo"></q-img>
       </q-parallax>
     </div>
 
     <div class="menu-line q-mb-lg"></div>
 
     <div class="fit row wrap justify-center items-start content-start">
-      <div>
-        <div class="container column q-pb-xl">
+      <div class="fit">
+        <div class="our-services-container column q-pb-xl">
+
           <!-- Our Services area -->
-          <p class="section-title">{{ $t('services.welcome') }}</p>
+          <p class="section-title-first">{{ $t('services.welcome') }}</p>
           <q-separator />
           <div class="row justify-center">
             <text-box :text-content="[ $t('services.info') ]" :icon-list='[ "las la-hotel" ]' text-color="text-red-9"></text-box>
@@ -36,7 +37,6 @@
             <text-box :text-content="[ $t('services.pets') ]" :icon-list='[ "las la-paw" ]' text-color="text-red-9"></text-box>
             <text-box :text-content="[ $t('services.smoking') ]" :icon-list='[ "las la-smoking-ban" ]' text-color="text-red-9"></text-box>
           </div>
-        </div>
 
     <!--    <div class="container column q-pb-xl">-->
     <!--      &lt;!&ndash; GDPR area &ndash;&gt;-->
@@ -47,7 +47,6 @@
     <!--      </div>-->
     <!--    </div>-->
 
-        <div class="container column q-pb-xl">
           <!-- Management Message area -->
           <p class="section-title">{{ $t('managementMsg.title') }}</p>
           <q-separator />
@@ -57,9 +56,7 @@
             <text-box :text-content="[ $t('managementMsg.complaints') ]" :icon-list='[ "las la-exclamation" ]' text-color="text-blue"></text-box>
             <text-box :text-content="[ $t('managementMsg.feedback') ]" :icon-list='[ "las la-comments" ]' text-color="text-blue"></text-box>
           </div>
-        </div>
 
-        <div class="container column q-pb-xl">
           <!-- PRO-Nature Message area -->
           <p class="section-title">{{ $t('proNatureMsg.title') }}</p>
           <q-separator />
@@ -83,10 +80,7 @@
 </template>
 
 <script>
-import { i18n } from "boot/i18n";
-import textBox from 'components/TextBox.vue';
-import companyBox from '../components/AboutUsCompany.vue';
-import authBox from '../components/AboutUsAuthoritiesBox';
+import textBox from 'components/TextBox2.vue';
 
 export default {
   name: 'OurServices',
@@ -102,14 +96,31 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.parallax-logo
+  max-width: 350px
+  margin-bottom: 0px
+
 .menu-line
   background-color: darkred
   height: 5px
 
-.container
+.our-services-container
   display: flex
   margin: auto
-  max-width: 920px
+  max-width: 1020px
+  padding: 3rem 1rem 2rem 1rem
+
+.header-title
+  font-size: 1.5rem
+  //padding: 2rem 2rem 0rem 2rem
+  margin: 0
+  color: white
+
+.section-title-first
+  font-size: 1.5rem
+  padding: 0rem 2rem 0rem 2rem
+  margin: 0
+  color: #525252
 
 .section-title
   font-size: 1.5rem
@@ -129,5 +140,40 @@ export default {
   color: grey
   text-align: center
   padding: 5px
+
+@media (width <= 1024px) and (width > 768px)
+  .our-services-container
+    padding: 2rem 2rem 2rem 2rem
+
+  .parallax-logo
+    max-width: 300px
+    margin-bottom: 0px
+
+@media (width <= 768px) and (width > 420px)
+  .our-services-container
+    padding: 2rem 2rem 2rem 2rem
+
+  .parallax-logo
+    max-width: 250px
+    margin-bottom: 0px
+
+
+@media (width <= 420px)
+  .parallax-logo
+    max-width: 200px
+    margin-bottom: 0
+
+  .our-services-container
+    padding: 0.5rem 0.5rem 1.5rem 0.5rem
+
+  .section-title-first
+    font-size: 1.3rem
+    padding: 0rem 2rem 0rem 2rem
+    margin: 0
+
+  .section-title
+    font-size: 1.3rem
+    padding: 2rem 2rem 0rem 2rem
+    margin: 0
 </style>
 

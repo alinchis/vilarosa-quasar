@@ -10,10 +10,10 @@
 
       <!-- navigation buttons -->
       <q-btn-group outline class="absolute-center navBtnGroup">
-        <q-btn size="md" color="red-10" :label="$t('navMenu.aboutUs')" to="/aboutUs"/>
-        <q-btn color="red-10" :label="$t('navMenu.ourServices')" to="/ourServices"/>
-        <q-btn color="red-10" :label="$t('navMenu.prices')" to="/rooms"/>
-        <q-btn color="red-10" :label="$t('navMenu.map')" to="/map"/>
+        <q-btn no-caps size="md" color="red-10" :label="$t('navMenu.aboutUs')" to="/aboutUs"/>
+        <q-btn no-caps color="red-10" :label="$t('navMenu.ourServices')" to="/ourServices"/>
+        <q-btn no-caps color="red-10" :label="$t('navMenu.prices')" to="/rooms"/>
+        <q-btn no-caps color="red-10" :label="$t('navMenu.map')" to="/map"/>
       </q-btn-group>
     </div>
 
@@ -31,34 +31,42 @@
         <div class="nav-fabs-box column">
           <q-btn
             fab
+            no-caps
             icon="las la-camera"
             color="blue-8"
             :hide-label="hideLabels"
             @click="openGallery('certification-gallery', 0)"
             class="q-mt-md"
-          ></q-btn>
-
-          <q-fab
-            v-if="this.language === 'ro-ro'"
-            icon="las la-user-check"
-            direction="left"
-            color="blue-8"
-            :hide-label="hideLabels"
-            class="q-mt-md"
           >
-            <q-fab-action @click="$router.push({ name: 'GDPRgroup' })" color="blue-8" icon="las la-user-friends" />
-            <q-fab-action @click="$router.push({ name: 'GDPRclient' })" color="blue-8" icon="las la-user" />
-          </q-fab>
+            <q-tooltip anchor="top left" :offset="[42, 36]">{{ $t('photoGallery.title') }}</q-tooltip>
+          </q-btn>
+
+<!--          <div>-->
+<!--            <q-fab-->
+<!--              v-if="this.language === 'ro-ro'"-->
+<!--              icon="las la-user-check"-->
+<!--              direction="left"-->
+<!--              color="blue-8"-->
+<!--              :hide-label="hideLabels"-->
+<!--              class="q-mt-md"-->
+<!--            >-->
+<!--              <q-fab-action @click="$router.push({ name: 'GDPRgroup' })" color="blue-8" icon="las la-user-plus" label="GDPR Grup"/>-->
+<!--              <q-fab-action @click="$router.push({ name: 'GDPRclient' })" color="blue-8" icon="las la-user" label="GDPR Individual"/>-->
+<!--            </q-fab>-->
+<!--            <q-tooltip anchor="top left" :offset="[42, 36]">{{ $t('gdpr.title') }}</q-tooltip>-->
+<!--          </div>-->
+
 
           <q-btn
-            v-if="this.language !== 'ro-ro'"
             fab
             icon="las la-user-check"
             color="blue-8"
             :hide-label="hideLabels"
             @click="$router.push({ name: 'GDPRclient' })"
             class="q-mt-md"
-          ></q-btn>
+          >
+            <q-tooltip anchor="top left" :offset="[42, 36]">{{ $t('gdpr.title') }}</q-tooltip>
+          </q-btn>
 
           <q-btn
             fab
@@ -67,7 +75,9 @@
             :hide-label="hideLabels"
             @click="$router.push({ name: 'Certification' })"
             class="q-mt-md"
-          ></q-btn>
+          >
+            <q-tooltip anchor="top left" :offset="[42, 36]">{{ $t('certification.title') }}</q-tooltip>
+          </q-btn>
         </div>
       </q-page-sticky>
 

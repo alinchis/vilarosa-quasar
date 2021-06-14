@@ -1,5 +1,5 @@
 <template>
-  <q-card class="info-card bg-transparent" flat>
+  <q-card class="bg-transparent info-card col-xs-12 col-md-4" flat>
     <q-card-section class="">
       <q-icon
         v-for="(headerIcon, headerIndex) in headerIcons"
@@ -16,10 +16,9 @@
           v-for="(iconPath, iconIndex) in iconsPaths"
           :key="'i' + iconIndex"
           size="xl"
-          :class="headerColor + ' q-pb-md q-pl-lg flex text-dark'"
-          style="width: 40px; padding: 0 0 16px 16px;"
+          :class="headerColor + ' q-pb-md q-pl-lg flex text-dark services-icon'"
         >
-          <img :srcset="iconPath" style="width: 40px; padding: 0 0 16px 16px;"/>
+          <img :srcset="iconPath" class="services-img"/>
         </q-icon>
       </div>
 
@@ -54,16 +53,16 @@ export default {
 
 <style lang="sass" scoped>
 .info-card
-  //background-color: $blue-grey-2
-  //width: 100%
-  min-width: 250px
-  max-width: 290px
+  font-size: 0.9rem
   color: #525252
-  margin: 0.5rem
+  margin: 0rem
 
-.table-text
-  font-size: 16px
-  max-width: 300px
-  overflow-wrap: normal
+.services-icon
+  width: 2.5rem
+  padding: 0 0 1rem 1rem
+
+.services-img
+  width: 2.5rem
+  padding: 0 0 1rem 1rem
 
 </style>
