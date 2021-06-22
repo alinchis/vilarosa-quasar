@@ -70,7 +70,7 @@
             ></services-box>
             <!-- 2*+ rooms -->
             <services-box
-              :header-icons="[ 'las la-star', 'las la-star', 'las la-star-half-alt' ]"
+              :header-icons="[ 'las la-star', 'las la-star', 'lar la-star' ]"
               header-color="text-red-10"
               :icons-list="[ 'add_sign', 'ac', 'safe_box' ]"
               icons-color=""

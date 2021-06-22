@@ -16,7 +16,7 @@
         <th class="text-right header-text">
           <q-icon name="las la-star"></q-icon>
           <q-icon name="las la-star"></q-icon>
-          <q-icon name="las la-star-half-alt"></q-icon>
+          <q-icon name="lar la-star"></q-icon>
         </th>
         <th class="text-right header-text">
           <q-icon name="las la-star"></q-icon>
@@ -145,7 +145,7 @@
           <img src="~assets/Icons/single_bed.svg" class="icon-single-bed"/>
         </q-icon>
       </td>
-      <td class="text-right table-text">{{ $t('rooms.recPrices.rooms2s.dblRoom') }}</td>
+      <td class="text-right table-text prices-text">{{ $t('rooms.recPrices.rooms2s.dblRoom') }}</td>
     </tr>
 
     <!-- double room row -->
@@ -157,7 +157,7 @@
           <q-img src="~assets/Icons/double_bed.svg" class="icon-double-bed"/>
         </q-icon>
       </td>
-      <td class="text-right table-text">{{ $t('rooms.recPrices.rooms2s.dbbRoom') }}</td>
+      <td class="text-right table-text prices-text">{{ $t('rooms.recPrices.rooms2s.dbbRoom') }}</td>
     </tr>
 
     <!-- triple room row -->
@@ -175,7 +175,7 @@
           <img src="~assets/Icons/single_bed.svg" class="icon-single-bed"/>
         </q-icon>
       </td>
-      <td class="text-right table-text">{{ $t('rooms.recPrices.rooms2s.triRoom') }}</td>
+      <td class="text-right table-text prices-text">{{ $t('rooms.recPrices.rooms2s.triRoom') }}</td>
     </tr>
 
     <!-- apartment row -->
@@ -190,7 +190,7 @@
           <img src="~assets/Icons/double_bed.svg" class="icon-double-bed"/>
         </q-icon>
       </td>
-      <td class="text-right table-text">{{ $t('rooms.recPrices.rooms2s.apt') }}</td>
+      <td class="text-right table-text prices-text">{{ $t('rooms.recPrices.rooms2s.apt') }}</td>
     </tr>
 
     </tbody>
@@ -202,7 +202,7 @@
       <th class="text-left">
         <q-icon name="las la-star"></q-icon>
         <q-icon name="las la-star"></q-icon>
-        <q-icon name="las la-star-half-alt"></q-icon>
+        <q-icon name="lar la-star"></q-icon>
       </th>
       <th class="text-center"></th>
       <th class="text-right"></th>
@@ -222,7 +222,7 @@
           <img src="~assets/Icons/single_bed.svg" class="icon-single-bed"/>
         </q-icon>
       </td>
-      <td class="text-right table-text">{{ $t('rooms.recPrices.rooms2sp.sglRoom') }}</td>
+      <td class="text-right table-text prices-text">{{ $t('rooms.recPrices.rooms2sp.sglRoom') }}</td>
     </tr>
 
     <!-- twin room row -->
@@ -237,7 +237,7 @@
           <img src="~assets/Icons/single_bed.svg" class="icon-single-bed"/>
         </q-icon>
       </td>
-      <td class="text-right table-text">{{ $t('rooms.recPrices.rooms2sp.dblRoom') }}</td>
+      <td class="text-right table-text prices-text">{{ $t('rooms.recPrices.rooms2sp.dblRoom') }}</td>
     </tr>
 
     <!-- triple room row -->
@@ -255,7 +255,7 @@
           <img src="~assets/Icons/single_bed.svg" class="icon-single-bed"/>
         </q-icon>
       </td>
-      <td class="text-right table-text">{{ $t('rooms.recPrices.rooms2sp.triRoom') }}</td>
+      <td class="text-right table-text prices-text">{{ $t('rooms.recPrices.rooms2sp.triRoom') }}</td>
     </tr>
 
     </tbody>
@@ -288,7 +288,7 @@
           <img src="~assets/Icons/single_bed.svg" class="icon-single-bed"/>
         </q-icon>
       </td>
-      <td class="text-right table-text">{{ $t('rooms.recPrices.rooms3s.sglRoom') }}</td>
+      <td class="text-right table-text prices-text">{{ $t('rooms.recPrices.rooms3s.sglRoom') }}</td>
     </tr>
 
     <!-- twin room row -->
@@ -303,7 +303,7 @@
           <img src="~assets/Icons/single_bed.svg" class="icon-single-bed"/>
         </q-icon>
       </td>
-      <td class="text-right table-text">{{ $t('rooms.recPrices.rooms3s.dblRoom') }}</td>
+      <td class="text-right table-text prices-text">{{ $t('rooms.recPrices.rooms3s.dblRoom') }}</td>
     </tr>
 
     <!-- double room row -->
@@ -315,7 +315,7 @@
           <q-img src="~assets/Icons/double_bed.svg" class="icon-double-bed"/>
         </q-icon>
       </td>
-      <td class="text-right table-text">{{ $t('rooms.recPrices.rooms3s.dbbRoom') }}</td>
+      <td class="text-right table-text prices-text">{{ $t('rooms.recPrices.rooms3s.dbbRoom') }}</td>
     </tr>
 
     </tbody>
@@ -354,5 +354,8 @@ th
 
   .icon-double-bed
     width: 28px
+
+  .prices-text
+    font-weight: bold
 
 </style>

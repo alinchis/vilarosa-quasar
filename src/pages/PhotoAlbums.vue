@@ -1,184 +1,86 @@
 <template>
-  <page class="">
-    <div>
-      <!--  DESKTOP - WRAPPER ITEM   -->
-      <q-layout v-if="$q.platform.is.desktop" class="bg-grey-9 text-white hide-scrollbar" view="lHr LpR lfr">
+  <q-page class="page-box fit row bg-grey-9 text-white hide-scrollbar items-center">
+    <!-- HEADER ------------------------------------------------------------------------------------------------ -->
+    <div class="row bg-transparent fixed-top justify-center z-top">
+      <!-- invisible div for centering items ------------------------------------------------------------------- -->
+      <div
+        class="bg-transparent no-border q-ma-md gt-sm"
+      >
+        <div style="width: 54px; height: 54px"></div>
+      </div>
 
-        <!-- HEADER -->
-        <q-header reveal class="bg-transparent row justify-center">
-          <div class="bg-transparent no-border q-ma-md gt-sm">
-            <div style="width: 54px; height: 54px"></div>
-          </div>
+      <!-- navigation buttons ---------------------------------------------------------------------------------- -->
+      <q-btn-group rounded class="q-ma-md header-btn-group">
+        <q-btn
+          color="amber"
+          text-color="black"
+          rounded
+          no-caps
+          :ripple="false"
+          class="text-h6 no-pointer-events"
+          :label="$t('rooms.titles.roomsPhotos')"
+        />
+        <q-btn
+          round
+          type="button"
+          size="18px"
+          color="deep-orange"
+          @click="closeAlbum"
+          icon="clear"
+          class="q-ma-none"
+          v-if="$q.screen.width < 1024"
+        />
+      </q-btn-group>
 
-          <q-btn-group rounded class="q-ma-md header-btn-group">
+      <!-- close /back button ---------------------------------------------------------------------------------- -->
+      <div class="bg-transparent no-border gt-sm">
+        <q-btn
+          round
+          type="button"
+          size="18px"
+          color="deep-orange"
+          @click="closeAlbum"
+          icon="clear"
+          class="q-ma-md"
+        />
+      </div>
+    </div>
 
-            <q-btn
-              color="amber"
-              rounded
-              no-caps
-              :ripple="false"
-              class="text-h6 no-pointer-events"
-              :label="$t('rooms.titles.roomsPhotos')"
-            />
-            <q-btn
-              round
-              type="button"
-              size="18px"
-              color="deep-orange"
-              @click="closeAlbum"
-              icon="clear"
-              class="q-ma-none"
-              v-if="$q.screen.width < 1024"
-            />
-          </q-btn-group>
-
-          <div class="bg-transparent no-border gt-sm">
-            <q-btn
-              round
-              type="button"
-              size="18px"
-              color="deep-orange"
-              @click="closeAlbum"
-              icon="clear"
-              class="q-ma-md"
-            />
-          </div>
-        </q-header>
-
-        <!-- PAGE -->
-        <q-page-container class="q-gutter-md q-ma-xl bg-transparent"
-                          style="min-width: 360px">
-          <q-page class="fit q-ma-none row items-center justify-center">
-            <div class="column">
-              <div
-                v-for="(album, index) in albums"
-                :key="index"
-                class="q-pa-xs q-ma-none row items-start q-gutter-md justify-center"
-                style="min-width: 300px; max-width: 500px"
-              >
-                <div :ratio="4/3" class="col q-ma-none" style="max-width: 500px">
-                  <q-card
-                    v-ripple
-                    class="column cursor-pointer"
-                    :ratio="4/3"
-                    @click="openAlbum(album.roomTypes)"
-
-                  >
-                    <q-img
-                      :src="album.src"
-                      class="col dimmed"
-                      @mouseenter="$event.target.classList.toggle('dimmed')"
-                      @mouseleave="$event.target.classList.toggle('dimmed')"
-                    >
-                    </q-img>
-                    <div
-                      class="text-h5 absolute-bottom text-center q-pa-sm"
-                      style="background-color: rgba(0,0,0, 0.5)"
-                    >
-                      {{ album.title }}
-                    </div>
-
-                  </q-card>
-                </div>
-              </div>
-            </div>
-
-          </q-page>
-
-        </q-page-container>
-      </q-layout>
-      <!--  DESKTOP - WRAPPER ITEM   -->
-
-
-      <!--  MOBILE - WRAPPER ITEM   -->
-      <q-layout v-if="$q.platform.is.mobile" class="bg-grey-9 text-white hide-scrollbar" view="lHr LpR lfr">
-
-        <!-- HEADER -->
-        <q-header reveal class="bg-transparent row justify-center">
-          <div v-if="$q.screen.width >= 640" class="bg-transparent no-border">
-            <q-btn
-              round
-              type="button"
-              size="18px"
-              color="deep-orange"
-              @click="closeAlbum"
-              icon="arrow_back"
-              class="q-ma-sm"
-            />
-          </div>
-
-          <q-btn-group rounded class="q-ma-sm header-btn-group">
-            <q-btn
-              round
-              type="button"
-              size="15px"
-              color="deep-orange"
-              @click="closeAlbum"
-              icon="arrow_back"
-              class="q-ma-none"
-              v-if="$q.screen.width < 640"
-            />
-            <q-btn
-              color="amber-14"
-              rounded
-              no-caps
-              :ripple="false"
-              class="text-h7"
-              @click="closeAlbum"
-              label=":selectedItem"
-            />
-            <q-btn
-              color="grey-8"
-              rounded
-              no-caps
-              :ripple="false"
-              class="text-h7 no-pointer-events"
-              label=":date"
-            />
-          </q-btn-group>
-
-          <div v-if="$q.screen.width >= 640" class="bg-transparent no-border q-ma-sm">
-            <div style="width: 54px; height: 54px"></div>
-          </div>
-
-        </q-header>
-
-        <!-- PAGE -->
-        <q-page-container class="q-gutter-md q-ma-sm bg-transparent"
-                          style="min-width: 300px">
-          <div
-              v-for="(album, index) in albums"
-              :key="index"
-              class="q-pa-xs q-ma-none row items-start q-gutter-md justify-center"
+    <!-- BODY -------------------------------------------------------------------------------------------------- -->
+    <div class="body-box fit row items-center justify-center">
+      <div class="albums-box column">
+        <q-card
+          v-for="(album, index) in albums"
+          :key="index"
+          class="album-box column cursor-pointer"
+          v-ripple
+          @click="openAlbum(album.roomTypes)"
+        >
+          <q-img
+            :src="album.src"
+            class="fit desktop-only col dimmed"
+            @mouseenter="hoverCssToggle"
+            @mouseleave="hoverCssToggle"
+            style="border-radius: 3px"
           >
-            <q-responsive :ratio="16/9" class="col q-ma-none" style="max-height: 150px; max-width: 400px">
-              <q-card
-                  v-ripple
-                  class="column cursor-pointer"
-                  :ratio="16/9"
-                  @click="openAlbum(album.roomTypes)"
-
-              >
-                <q-img
-                    :src="album.src"
-                    class="col"
-                >
-                </q-img>
-                <div
-                    class="text-h6 absolute-bottom text-center q-pa-sm"
-                    style="background-color: rgba(0,0,0, 0.5)"
-                >
-                  {{ album.title }}
-                </div>
-              </q-card>
-            </q-responsive>
+          </q-img>
+          <q-img
+            :src="album.src"
+            class="fit mobile-only col"
+            style="border-radius: 3px"
+          >
+          </q-img>
+          <div
+            class="img-box-text absolute-bottom text-center q-pa-sm"
+          >
+            {{ album.title }}
           </div>
-        </q-page-container>
-      </q-layout>
-      <!--  MOBILE - WRAPPER ITEM   -->
+        </q-card>
+      </div>
 
     </div>
-  </page>
+
+  </q-page>
 </template>
 
 <script>
@@ -217,7 +119,7 @@ export default {
 
   methods: {
     openAlbum: function (roomType) {
-      console.log('@PhotoAlbums.vue :: @openAlbum >> selected album: ', roomType);
+      // console.log('@PhotoAlbums.vue :: @openAlbum >> selected album: ', roomType);
       this.$q.sessionStorage.set('roomType', roomType);
       this.$router.push({ name: 'Gallery' });
     },
@@ -233,27 +135,53 @@ export default {
       }
 
     },
+
+    hoverCssToggle(event) {
+      event.target.classList.toggle('dimmed');
+    },
   },
 
 }
 </script>
 
 <style lang="sass" scoped>
-.custom-caption
-  text-align: center
-  padding: 12px
-  color: white
-  background-color: rgba(0, 0, 0, .3)
+.page-box
+  padding: 5rem 0 5rem 0
+.album-box
+  width: 600px
+  height: 250px
+  margin-bottom: 1rem
 
-.text-example
-  display: flex
-  align-items: center
-  justify-content: center
-  flex-direction: column
-  width: 100%
-  text-align: center
-  margin: 10% 0
-  min-height: 200px
-  background-color: rgba(33, 33, 33, .3)
-  align-items: center
+.img-box-text
+  font-size: 1.4rem
+  background-color: rgba(0,0,0, 0.4)
+
+@media (width <= 1024px) and (width > 768px)
+  //.album-box
+  //  width: 500px
+  //  height: 220px
+  //.img-box-text
+  //  font-size: 1.2rem
+
+@media (width <= 768px) and (width > 420px)
+  .page-box
+    padding: 6rem 0 2rem 0
+  .album-box
+    width: 400px
+    height: 200px
+  .img-box-text
+    font-size: 1.2rem
+
+@media (width <= 420px)
+  .page-box
+    padding: 6.5rem 0 1rem 0
+  .albums-box
+    width: 320px
+  .album-box
+    width: 320px
+    height: 160px
+
+  .img-box-text
+    font-size: 1.2rem
+
 </style>

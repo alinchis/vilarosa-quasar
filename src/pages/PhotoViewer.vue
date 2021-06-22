@@ -1,127 +1,65 @@
 <template>
-  <div>
-    <div>
-      <!--  DESKTOP - WRAPPER ITEM   -->
-      <q-layout v-if="$q.platform.is.desktop" class="bg-grey-9 text-white" view="lHr LpR lfr">
-        <!-- HEADER -->
-        <q-header reveal class="bg-transparent row justify-center">
-          <div class="bg-transparent no-border q-ma-md gt-sm">
-            <div style="width: 54px; height: 54px"></div>
-          </div>
+  <q-page class="page-box fit column bg-grey-9 text-white hide-scrollbar">
+    <!-- HEADER ---------------------------------------------------------------------------------------------------- -->
+    <div v-if="!fullscreen" class="row bg-transparent fixed-top justify-center z-top">
+      <!-- invisible div for centering items ----------------------------------------------------------------------- -->
+      <div
+        class="bg-transparent no-border q-ma-md gt-sm"
+      >
+        <div style="width: 54px; height: 54px"></div>
+      </div>
 
-          <q-btn-group rounded class="q-ma-md header-btn-group">
-            <q-btn
-                color="grey-8"
-                rounded
-                no-caps
-                :ripple="false"
-                class="text-h6"
-                @click="closeViewer"
-                :label="roomType"
-            />
-            <q-btn
-                color="amber-14"
-                rounded
-                no-caps
-                :ripple="false"
-                class="text-h6 no-pointer-events"
-                :label="Room.name"
-            />
-            <q-btn
-                round
-                type="button"
-                size="18px"
-                color="deep-orange"
-                @click="closeViewer"
-                icon="arrow_back"
-                class="q-ma-none"
-                v-if="$q.screen.width < 1024"
-            />
-          </q-btn-group>
+      <!-- navigation buttons -------------------------------------------------------------------------------------- -->
+      <q-btn-group
+        rounded class="q-ma-md header-btn-group"
+      >
+        <q-btn
+          color="grey-8"
+          rounded
+          no-caps
+          :ripple="false"
+          class="text-h6"
+          @click="closeViewer"
+          :label="roomType"
+        />
+        <q-btn
+          text-color="black"
+          color="amber-14"
+          rounded
+          no-caps
+          :ripple="false"
+          class="text-h6 no-pointer-events"
+          :label="Room.name"
+        />
+        <q-btn
+          round
+          type="button"
+          size="18px"
+          color="deep-orange"
+          @click="closeViewer"
+          icon="arrow_back"
+          class="q-ma-none"
+          v-if="$q.screen.width < 1024"
+        />
+      </q-btn-group>
 
-          <div class="bg-transparent no-border gt-sm">
-            <q-btn
-                round
-                type="button"
-                size="18px"
-                color="deep-orange"
-                @click="closeViewer"
-                icon="arrow_back"
-                class="q-ma-md"
-            />
-          </div>
-        </q-header>
-
-        <!-- PAGE -->
-        <q-page-container
-            class="bg-transparent fit"
-            style="min-width: 360px;"
-        >
-          <Carousel :Room="Room"></Carousel>
-        </q-page-container>
-      </q-layout>
-      <!--  DESKTOP - WRAPPER ITEM   -->
-
-
-      <!--  MOBILE - WRAPPER ITEM   -->
-      <q-layout v-if="$q.platform.is.mobile" class="bg-grey-9 text-white" view="lHr LpR lfr">
-        <!-- HEADER -->
-        <div reveal class="bg-transparent row justify-center z-fab" style="position: fixed; top: 0px;">
-          <div v-if="$q.screen.width >= 640" class="bg-transparent no-border">
-            <q-btn
-                round
-                type="button"
-                size="18px"
-                color="deep-orange"
-                @click="closeViewer"
-                icon="arrow_back"
-                class="q-ma-sm"
-            />
-          </div>
-
-          <q-btn-group rounded class="q-ma-sm header-btn-group">
-            <q-btn
-                round
-                type="button"
-                size="15px"
-                color="deep-orange"
-                @click="closeViewer"
-                icon="arrow_back"
-                class="q-ma-none"
-                v-if="$q.screen.width < 640"
-            />
-            <q-btn
-                color="amber-14"
-                rounded
-                no-caps
-                :ripple="false"
-                class="text-h7"
-                @click="closeViewer"
-                label=":date"
-            />
-            <q-btn
-                color="grey-8"
-                rounded
-                no-caps
-                :ripple="false"
-                class="text-h7 no-pointer-events"
-                :label="Room.name"
-            />
-          </q-btn-group>
-        </div>
-
-        <!-- PAGE -->
-        <q-page-container
-            class="bg-transparent fit"
-            style="min-width: 300px;"
-        >
-          <Carousel :Room="Room"></Carousel>
-        </q-page-container>
-      </q-layout>
-      <!--  MOBILE - WRAPPER ITEM   -->
-
+      <!-- close /back button -------------------------------------------------------------------------------------- -->
+      <div class="bg-transparent no-border gt-sm">
+        <q-btn
+          round
+          type="button"
+          size="18px"
+          color="deep-orange"
+          @click="closeViewer"
+          icon="arrow_back"
+          class="q-ma-md"
+        />
+      </div>
     </div>
-  </div>
+
+    <!-- BODY ------------------------------------------------------------------------------------------------------ -->
+    <Carousel :Room="Room" @fullscreen="toggleFullscreen"></Carousel>
+  </q-page>
 </template>
 
 <script>
@@ -136,6 +74,7 @@ export default {
       maximizedToggle: true,
       slide: 1,
       carousel: false,
+      fullscreen: false,
     };
   },
 
@@ -157,6 +96,10 @@ export default {
       // change route to gallery
       this.$router.push({ name: 'Gallery' });
     },
+
+    toggleFullscreen(value) {
+      this.fullscreen = value;
+    },
   },
 
   created() {
@@ -167,7 +110,4 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.my-card
-  width: 150px
-  height: 150px
 </style>

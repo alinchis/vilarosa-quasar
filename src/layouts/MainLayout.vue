@@ -1,14 +1,14 @@
 <template>
   <q-layout view="lHh lpr lFf" class="">
-    <!-- header -->
+    <!-- header ---------------------------------------------------------------------------------------------------- -->
     <div v-if="showHeader" class="fixed-top bg-transparent z-top">
-      <!-- language toggle button -->
+      <!-- language toggle button ---------------------------------------------------------------------------------- -->
       <q-btn @click="toggleLanguage" round class=" q-ma-md z-top">
         <q-img v-if="language === 'ro-ro'" src="~assets/FlagIcons/RO-flag-icon.png"></q-img>
         <q-img v-if="language === 'en-us'" src="~assets/FlagIcons/USA-flag-icon.png"></q-img>
       </q-btn>
 
-      <!-- navigation buttons -->
+      <!-- navigation buttons -------------------------------------------------------------------------------------- -->
       <q-btn-group outline class="absolute-center navBtnGroup">
         <q-btn no-caps size="md" color="red-10" :label="$t('navMenu.aboutUs')" to="/aboutUs"/>
         <q-btn no-caps color="red-10" :label="$t('navMenu.ourServices')" to="/ourServices"/>
@@ -17,16 +17,16 @@
       </q-btn-group>
     </div>
 
-    <!-- page container -->
+    <!-- page container -------------------------------------------------------------------------------------------- -->
     <q-page-container class="fit q-pa-none">
-      <!-- page -->
+      <!-- page ---------------------------------------------------------------------------------------------------- -->
       <router-view/>
 
 <!--      <q-page-sticky position="right" :offset="[18, 18]">-->
 <!--        <q-btn round color="accent" icon="arrow_back" class="rotate-45" />-->
 <!--      </q-page-sticky>-->
 
-      <!-- fab buttons -->
+      <!-- fab buttons --------------------------------------------------------------------------------------------- -->
       <q-page-sticky :position="fabPosition" v-if="showFabs" class="nav-fabs-sticky" :offset="[10, 60]">
         <div class="nav-fabs-box column">
           <q-btn

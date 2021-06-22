@@ -136,7 +136,7 @@ export default {
 
 .footer
   background-color: $blue-grey-2
-  font-size: 0.9rem
+  font-size: 0.75rem
   color: grey
   text-align: center
   padding: 5px
