@@ -39,11 +39,11 @@ const routes = [
       // map
       { name: 'Map', path: 'map',
         component: () => import('pages/Map_mapbox.vue'),
-        // beforeEnter: (to, from, next) => {
-        //   // console.log('beforeEnter: Rooms');
-        //   sessionStorage.setItem('routeName', 'Map');
-        //   next();
-        // }
+        beforeEnter: (to, from, next) => {
+          // console.log('beforeEnter: Map');
+          sessionStorage.setItem('routeName', 'Map');
+          next();
+        }
       },
 
       // gdpr paths

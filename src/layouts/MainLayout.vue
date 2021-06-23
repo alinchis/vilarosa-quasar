@@ -1,20 +1,14 @@
 <template>
   <q-layout view="lHh lpr lFf" class="">
+    <!-- language toggle button ---------------------------------------------------------------------------------- -->
+    <q-btn v-if="showHeader" @click="toggleLanguage" round class="lang-btn fixed-top-left z-max">
+      <q-img v-if="language === 'ro-ro'" src="~assets/FlagIcons/RO-flag-icon.png"></q-img>
+      <q-img v-if="language === 'en-us'" src="~assets/FlagIcons/USA-flag-icon.png"></q-img>
+    </q-btn>
     <!-- header ---------------------------------------------------------------------------------------------------- -->
-    <div v-if="showHeader" class="fixed-top bg-transparent z-top">
-      <!-- language toggle button ---------------------------------------------------------------------------------- -->
-      <q-btn @click="toggleLanguage" round class=" q-ma-md z-top">
-        <q-img v-if="language === 'ro-ro'" src="~assets/FlagIcons/RO-flag-icon.png"></q-img>
-        <q-img v-if="language === 'en-us'" src="~assets/FlagIcons/USA-flag-icon.png"></q-img>
-      </q-btn>
-
-      <!-- navigation buttons -------------------------------------------------------------------------------------- -->
-      <q-btn-group outline class="absolute-center navBtnGroup">
-        <q-btn no-caps size="md" color="red-10" :label="$t('navMenu.aboutUs')" to="/aboutUs"/>
-        <q-btn no-caps color="red-10" :label="$t('navMenu.ourServices')" to="/ourServices"/>
-        <q-btn no-caps color="red-10" :label="$t('navMenu.prices')" to="/rooms"/>
-        <q-btn no-caps color="red-10" :label="$t('navMenu.map')" to="/map"/>
-      </q-btn-group>
+    <div v-if="showHeader" class="fixed-top bg-transparent z-top row items-center justify-center">
+            <!-- navigation buttons -------------------------------------------------------------------------------------- -->
+      <nav-bar></nav-bar>
     </div>
 
     <!-- page container -------------------------------------------------------------------------------------------- -->
@@ -26,8 +20,32 @@
 <!--        <q-btn round color="accent" icon="arrow_back" class="rotate-45" />-->
 <!--      </q-page-sticky>-->
 
-      <!-- fab buttons --------------------------------------------------------------------------------------------- -->
-      <q-page-sticky :position="fabPosition" v-if="showFabs" class="nav-fabs-sticky" :offset="[10, 60]">
+      <!-- fab buttons - top-right 33------------------------------------------------------------------------------- -->
+<!--      <q-page-sticky-->
+<!--        v-if="showFabs && $q.screen.height >= 460"-->
+<!--        position="top-right" class="nav-fabs-sticky" :offset="[10, 60]"-->
+<!--      >-->
+<!--        <div class="nav-fabs-box column">-->
+<!--          <q-btn-->
+<!--            fab-->
+<!--            no-caps-->
+<!--            icon="las la-camera"-->
+<!--            color="blue-8"-->
+<!--            :hide-label="hideLabels"-->
+<!--            @click="openGallery('certification-gallery', 0)"-->
+<!--            class="q-mt-md"-->
+<!--          >-->
+<!--            <q-tooltip anchor="top left" :offset="[42, 36]">{{ $t('photoGallery.title') }}</q-tooltip>-->
+<!--          </q-btn>-->
+<!--        </div>-->
+<!--      </q-page-sticky>-->
+
+
+      <!-- fab buttons - right ------------------------------------------------------------------------------------- -->
+      <q-page-sticky
+        v-if="showFabs && $q.screen.height < 460"
+        :position="fabPositionPhotos" class="nav-fabs-sticky" :offset="[10, 60]"
+      >
         <div class="nav-fabs-box column">
           <q-btn
             fab
@@ -41,26 +59,10 @@
             <q-tooltip anchor="top left" :offset="[42, 36]">{{ $t('photoGallery.title') }}</q-tooltip>
           </q-btn>
 
-<!--          <div>-->
-<!--            <q-fab-->
-<!--              v-if="this.language === 'ro-ro'"-->
-<!--              icon="las la-user-check"-->
-<!--              direction="left"-->
-<!--              color="blue-8"-->
-<!--              :hide-label="hideLabels"-->
-<!--              class="q-mt-md"-->
-<!--            >-->
-<!--              <q-fab-action @click="$router.push({ name: 'GDPRgroup' })" color="blue-8" icon="las la-user-plus" label="GDPR Grup"/>-->
-<!--              <q-fab-action @click="$router.push({ name: 'GDPRclient' })" color="blue-8" icon="las la-user" label="GDPR Individual"/>-->
-<!--            </q-fab>-->
-<!--            <q-tooltip anchor="top left" :offset="[42, 36]">{{ $t('gdpr.title') }}</q-tooltip>-->
-<!--          </div>-->
-
-
           <q-btn
             fab
             icon="las la-user-check"
-            color="blue-8"
+            color="grey-8"
             :hide-label="hideLabels"
             @click="$router.push({ name: 'GDPRclient' })"
             class="q-mt-md"
@@ -71,7 +73,50 @@
           <q-btn
             fab
             icon="las la-certificate"
+            color="grey-8"
+            :hide-label="hideLabels"
+            @click="$router.push({ name: 'Certification' })"
+            class="q-mt-md"
+          >
+            <q-tooltip anchor="top left" :offset="[42, 36]">{{ $t('certification.title') }}</q-tooltip>
+          </q-btn>
+        </div>
+      </q-page-sticky>
+
+      <!-- fab buttons - bottom-right ------------------------------------------------------------------------------ -->
+      <q-page-sticky
+        v-if="showFabs && $q.screen.height >= 460"
+        position="bottom-right" class="" :offset="[10, 60]"
+      >
+        <div class="nav-fabs-box column">
+
+          <q-btn
+            fab
+            no-caps
+            icon="las la-camera"
             color="blue-8"
+            :hide-label="hideLabels"
+            @click="openGallery('certification-gallery', 0)"
+            class="q-mt-md"
+          >
+            <q-tooltip anchor="top left" :offset="[42, 36]">{{ $t('photoGallery.title') }}</q-tooltip>
+          </q-btn>
+
+          <q-btn
+            fab
+            icon="las la-user-check"
+            color="grey-8"
+            :hide-label="hideLabels"
+            @click="$router.push({ name: 'GDPRclient' })"
+            class="q-mt-md"
+          >
+            <q-tooltip anchor="top left" :offset="[42, 36]">{{ $t('gdpr.title') }}</q-tooltip>
+          </q-btn>
+
+          <q-btn
+            fab
+            icon="las la-certificate"
+            color="grey-8"
             :hide-label="hideLabels"
             @click="$router.push({ name: 'Certification' })"
             class="q-mt-md"
@@ -90,10 +135,11 @@
 
 <script>
 import GdprMessage from "components/GdprMessage";
+import NavBar from "components/NavBar";
 
 export default {
   name: 'MainLayout',
-  components: { GdprMessage },
+  components: { GdprMessage, NavBar },
 
   data () {
     return {
@@ -118,9 +164,9 @@ export default {
       return this.$route.name === 'AboutUs' || this.$route.name === 'OurServices' || this.$route.name === 'Rooms' || this.$route.name === 'Map';
     },
 
-    fabPosition() {
+    fabPositionPhotos() {
       // console.log(this.$q.screen.lt.sm);
-      return this.$q.screen.lt.sm ? 'bottom-right' : 'right';
+      return this.$q.screen.height < 460 ? 'bottom-right' : 'right';
     },
 
   },
@@ -154,6 +200,9 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.lang-btn
+  margin: 1.1rem 1rem 1rem 1rem
+
 .navBtnGroup
   margin-top: 0px
 
@@ -170,6 +219,13 @@ export default {
   .nav-fabs-sticky
     margin-right: 10px
     margin-bottom: 20px
+
+@media (width <= 768px) and (width > 420px)
+
+
+@media (width <= 420px)
+  .lang-btn
+    margin: -1rem 0 0 0.5rem
 
 </style>
 

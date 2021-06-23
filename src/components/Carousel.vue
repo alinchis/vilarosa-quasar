@@ -206,20 +206,20 @@ export default {
       }
     },
 
-    handleOrientationChange() {
-      const orientation = window.screen.orientation.type
-      if (orientation === "portrait-primary") {
-        // portrait mode
-        console.log('portrait');
-        this.mobileLandscape = false;
-        console.log(this.mobileLandscape)
-      } else if (orientation === "landscape-primary") {
-        // landscape mode
-        console.log('landscape');
-        this.mobileLandscape = this.$q.platform.is.mobile ? true : false
-        console.log(this.mobileLandscape)
-      }
-    }
+    // handleOrientationChange() {
+    //   const orientation = window.screen.orientation.type
+    //   if (orientation === "portrait-primary") {
+    //     // portrait mode
+    //     console.log('portrait');
+    //     this.mobileLandscape = false;
+    //     console.log(this.mobileLandscape)
+    //   } else if (orientation === "landscape-primary") {
+    //     // landscape mode
+    //     console.log('landscape');
+    //     this.mobileLandscape = this.$q.platform.is.mobile ? true : false
+    //     console.log(this.mobileLandscape)
+    //   }
+    // },
   },
 
   created() {
@@ -229,7 +229,7 @@ export default {
 
   mounted() {
     // add event listener for screen orientation change
-    window.addEventListener("orientationchange", this.handleOrientationChange );
+    // window.addEventListener("orientationchange", this.handleOrientationChange );
   },
 
 }
@@ -281,8 +281,8 @@ export default {
 .img-strip-card-selected
   border: 3px solid darkorange
 
-@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape)
-  .img-item
-    max-height: 100vh
+//@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape)
+//  .img-item
+//    max-height: 100vh
 
 </style>
