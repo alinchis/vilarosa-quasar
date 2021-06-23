@@ -4,7 +4,7 @@ export default {
   navMenu: {
     aboutUs: 'About Us',
     ourServices: 'Our Services',
-    prices: 'Rooms',
+    rooms: 'Rooms',
     map: 'Map',
   },
 
@@ -43,7 +43,7 @@ export default {
     title: 'Personal data protection (GDPR)',
     message: [
       'The website does not collect personal data.',
-      'For proper functioning, navigation data (GDPR notification flag, language selection, page, room type and room number for photo album) is saved in SessionStorage, in browser. This data is deleted automatically when closing the page.',
+      'For proper functioning, navigation data (GDPR notification flag, language selection, page, room type and room number for photo album, map data) is saved in browser. This data is deleted automatically when closing the page.',
     ],
     btnText: 'Close',
   },

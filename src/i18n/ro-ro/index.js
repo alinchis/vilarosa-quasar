@@ -4,7 +4,7 @@ export default {
   navMenu: {
     aboutUs: 'Despre Noi',
     ourServices: 'Serviciile Noastre',
-    prices: 'Cazare',
+    rooms: 'Cazare',
     map: 'Harta',
   },
 
@@ -43,7 +43,7 @@ export default {
     title: 'Protecția datelor personale (GDPR)',
     message: [
       'Pagina de internet nu colectează date personale.',
-      'Pentru funcționarea corespunzătoare a paginii, se salvează în browser (SessionStorage) date de navigare (notificare GDPR, selecție limbă, pagina, tipul camerei, numărul camerei). Aceste date se șterg când se închide pagina.',
+      'Pentru funcționarea corespunzătoare a paginii, se salvează în browser date necesare pentru navigare (notificare GDPR, selecție limbă, pagina, tipul camerei, numărul camerei, harta). Aceste date se șterg când se închide pagina.',
     ],
     btnText: 'Inchide',
   },

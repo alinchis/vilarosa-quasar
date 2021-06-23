@@ -1,3 +1,4 @@
+// /src/router/routes.js
 
 const routes = [
   {
