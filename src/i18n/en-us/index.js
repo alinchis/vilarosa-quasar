@@ -64,7 +64,7 @@ export default {
 
     reservations: {
       title: 'Reservations',
-      text: 'For reservations please contact Reception on the phone or email:',
+      text: 'For reservations please contact Reception on the phone or email, daily from 8 AM to 8 PM:',
     },
 
     titles: {

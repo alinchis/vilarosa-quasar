@@ -64,7 +64,7 @@ export default {
 
     reservations: {
       title: 'Rezervări',
-      text: 'Pentru rezervări vă rugăm să contactați Recepția la telefon sau pe email:',
+      text: 'Pentru rezervări vă rugăm să contactați Recepția la telefon sau pe email, zilnic între orele 8:00-20:00 :',
     },
 
     titles: {

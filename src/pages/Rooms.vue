@@ -27,7 +27,7 @@
               <p class="section-subtitle2-first">{{ $t('rooms.reservations.text') }}</p>
             </div>
 
-            <div class="row justify-center">
+            <div class="row fit justify-center">
               <p
                 class="contact-info cursor-pointer"
                 @click="copyOnClick($t('company.mobile'))"
@@ -251,16 +251,17 @@ export default {
   padding: 1.5rem 0 0 0
 
 .contact-info
-  font-size: 1rem
   display: flex
   align-items: center
   border-radius: 5px
   font-weight: bold
   color: darkred
-  margin: 0 0 0 0.5rem
-  padding: 0 0.3rem 0 0.3rem
-  //padding: 0
   text-align: center
+  background-color: #f2f6f8
+  border: 1px solid
+  font-size: 1.1rem
+  margin: 1rem
+  padding: 0.5rem
 
 .section-notes
   font-size: 1rem
