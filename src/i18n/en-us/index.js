@@ -26,7 +26,7 @@ export default {
     info: 'We offer 2 and 3 stars hotel rooms and 3 star restaurant services. The hotel rooms are divided in two buildings at the same site, the Breakfant is served inside the main, 2 stars hotel, building. The villa is open all year round, with the exception of the big holidays when our employees are on vacation.',
     buildings: 'The buildings do not have elevators. The 2* building has the rooms available on 4 floors. Room numbers run from 10 to 43, with the tens figure representing the floor number. The 3* building has its rooms available on 4 floors. Room numbers run from 101 to 404, with the hundreds figure representing the floor number.',
     parking: 'We offer free parking with video surveillance inside our property.',
-    reception: 'Reception is open daily from 8 AM to 8 PM. Please contact us for informations and reservations.',
+    reception: 'Reception is open daily from 8 AM to 8 PM. For emergencies outside working hours please contact us on Telegram App.',
     reservation: 'After the reservation process is complete, the Reception sends a confirmation message via mobile SMS or e-mail. Only the reservations that have been confirmed are considered valid. The confirmation message contains the name of the person making the reservation, accommodation period, room quantity and type, number of people expected, prices given and the receptionist name. On the arrival day, the Reception may contact the reservation person for arrival confirmation.',
     checkInOut: 'The hotel day starts at 15:00 on the day of arrival and ends at 11:00, the next day. Check-in is available only between 15:00-20:00. For different arrangements please contact Reception ahead of time, for there might be overlapping with other clients and fees may apply.',
     gdpr: 'At check in clients are required to fill in and sign the check in form (HG 237/2001 updated) and the consent to process personal data (GDPR). These are mandatory by law for hotels and we will not service customers who refuse to sign.',
@@ -64,7 +64,7 @@ export default {
 
     reservations: {
       title: 'Reservations',
-      text: 'For reservations please contact Reception on the phone or email, daily from 8 AM to 8 PM:',
+      text: 'For reservations please contact Reception on the phone or email, daily from 8 AM to 8 PM. For emergencies outside working hours please contact us on Telegram App.',
     },
 
     titles: {

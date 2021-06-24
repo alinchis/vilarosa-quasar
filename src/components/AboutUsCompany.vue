@@ -50,6 +50,7 @@
     >
       <div class="icon-box">
         <q-icon name="las la-phone" class="item-icon"></q-icon>
+        <q-icon name="lab la-telegram" class="item-icon"></q-icon>
         <q-icon name="lab la-whatsapp" class="item-icon"></q-icon>
         <q-icon name="las la-sms" class="item-icon"></q-icon>
       </div>

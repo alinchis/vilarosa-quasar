@@ -28,15 +28,23 @@
             </div>
 
             <div class="row fit justify-center">
+
               <p
                 class="contact-info cursor-pointer"
                 @click="copyOnClick($t('company.mobile'))"
-              >{{ $t('company.mobile') }}</p>
+              >
+                <q-icon name="las la-phone" class="item-icon"></q-icon>
+                <q-icon name="lab la-telegram"></q-icon>: {{ $t('company.mobile') }}
+                <q-tooltip>{{ $t('company.tooltipMsg') }}</q-tooltip>
+              </p>
 
               <p
                 class="contact-info cursor-pointer"
                 @click="copyOnClick($t('company.email.reception'))"
-              >{{ $t('company.email.reception') }}</p>
+              >
+                <q-icon name="las la-at"></q-icon>: {{ $t('company.email.reception') }}
+                <q-tooltip>{{ $t('company.tooltipMsg') }}</q-tooltip>
+              </p>
             </div>
           </div>
         </div>

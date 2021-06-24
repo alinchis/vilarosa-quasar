@@ -26,7 +26,7 @@ export default {
     info: 'Vila Rosa vă pune la dispoziție servicii de cazare de 2 și 3 stele, împărțite în 2 pavilioane, și Mic Dejun în pavilionul de 2 stele. Serviciile de cazare sunt disponibile pe tot parcursul anului, cu exceptia marilor sarbatori legale, cand personalul este in concediu.',
     buildings: 'Pavilioanele nu au instalat ascensor. Clădirea de 2* are camerele distribuite pe 3 etaje și mansardă. Camerele sunt numerotate de la 10 la 43, cu cifra zecilor reprezentând etajul. Clădirea de 3* are camerele distribuite pe parter, 2 etaje și mansardă. Camerele sunt numerotate de la 101 la 404, cu cifra sutelor reprezentând nivelul.',
     parking: 'Unitatea vă pune la dispoziție parcare auto în incinta proprie cu supraveghere video.',
-    reception: 'Recepția funcționează în regim zilnic între orele 08:00-20:00. Nu se efectueaza rezervări și cazări înafara programului. Pentru rezervări și informații vă rugăm să ne contactați.',
+    reception: 'Recepția funcționează în regim zilnic între orele 08:00-20:00. Nu se efectuează rezervări și cazări în afara programului. Pentru urgențe, în afara programului, vă rugăm să ne contactați pe aplicația Telegram.',
     reservation: 'La finalizarea procesului de rezervare, Recepția transmite confirmarea rezervării prin mesaj pe mobil sau e-mail. Numai rezervările care au primit confirmare sunt considerate valabile. Confirmarea cuprinde numele persoanei care a făcut rezervarea, perioada șederii, numărul și tipul camerelor rezervate, numărul de oaspeți asteptați, tarifele acordate și numele recepționerului de serviciu. În ziua cazării, e posibil ca Recepția să contactateze telefonic persoana responsabilă de rezervare pentru a confirma sosirea.',
     checkInOut: 'Ziua hotelieră începe la ora 15:00 în ziua cazării și se încheie la ora 11:00, în ziua următoare. Cazările se efectuează doar în intervalul 15:00-20:00. Pentru excepții vă rugăm să anunțați Recepția din timp, deoarece pot apărea suprapuneri cu alte rezervări și se pot percepe tarife suplimentare.',
     gdpr: 'La momentul cazării, cliențiilor li se cere să completeze și semneze fișa de cazare (HG 237/2001 actualizată) și Declarația de Consimțămant pentru procesarea datelor personale (GDPR), în caz că nu este deja. Documentele menționate reprezintă obligativitate legală pentru unitatea hotelieră și nu se vor caza clienți care refuză să semneze.',
@@ -64,7 +64,7 @@ export default {
 
     reservations: {
       title: 'Rezervări',
-      text: 'Pentru rezervări vă rugăm să contactați Recepția la telefon sau pe email, zilnic între orele 8:00-20:00 :',
+      text: 'Pentru rezervări vă rugăm să contactați Recepția la telefon sau pe email, zilnic între orele 8:00-20:00. Pentru urgențe, în afara programului, vă rugăm să ne contactați pe aplicația Telegram.',
     },
 
     titles: {
