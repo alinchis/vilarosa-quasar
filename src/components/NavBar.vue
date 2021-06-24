@@ -34,9 +34,9 @@
 export default {
   name: "NavBar",
 
-  data() {
-    return {
-      navList: [
+  computed: {
+    navList() {
+      return [
         {
           id: 'AboutUsBtn',
           routeName: 'AboutUs',
@@ -62,7 +62,7 @@ export default {
           itemText: this.$t('navMenu.map'),
         },
       ]
-    }
+    },
   },
 
 }
