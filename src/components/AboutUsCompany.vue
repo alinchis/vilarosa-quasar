@@ -130,7 +130,6 @@
       </div>
       <q-tooltip>
         {{ $t('company.tooltipMsg') }}
-        cXC-wZI-5Ic-2wC!
       </q-tooltip>
     </div>
 
