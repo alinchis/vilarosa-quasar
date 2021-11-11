@@ -107,24 +107,24 @@ export default {
     recPrices: {
       rooms2s: {
         sglRoom: '',
-        dblRoom: '140 LEI',
-        dbbRoom: '140 LEI',
-        triRoom: '190 LEI',
-        apt: '210 LEI',
+        dblRoom: '120 LEI',
+        dbbRoom: '120 LEI',
+        triRoom: '160 LEI',
+        apt: '180 LEI',
       },
 
       rooms2sp: {
-        sglRoom: '140 LEI',
-        dblRoom: '160 LEI',
+        sglRoom: '125 LEI',
+        dblRoom: '140 LEI',
         dbbRoom: '',
-        triRoom: '210 LEI',
+        triRoom: '180 LEI',
         apt: '',
       },
 
       rooms3s: {
-        sglRoom: '140 LEI',
-        dblRoom: '160 LEI',
-        dbbRoom: '160 LEI',
+        sglRoom: '125 LEI',
+        dblRoom: '140 LEI',
+        dbbRoom: '140 LEI',
         triRoom: '',
         apt: '',
       }
