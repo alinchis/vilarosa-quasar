@@ -62,6 +62,11 @@ export default {
     recPriceTitle: 'Tarife Recepție',
     noBreakfast: 'fără Mic Dejun',
 
+    holiday: {
+      title: 'Concediu de odihnă',
+      text: 'Suntem în concediu până în 10 ianuarie 2022. Vă dorim sărbători fericite si să ne vedem cu bine în noul an!',
+    },
+
     reservations: {
       title: 'Rezervări',
       text: 'Pentru rezervări vă rugăm să contactați Recepția la telefon sau pe email, zilnic între orele 8:00-20:00. Pentru urgențe, în afara programului, vă rugăm să ne contactați pe aplicația Telegram.',

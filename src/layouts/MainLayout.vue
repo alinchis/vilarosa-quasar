@@ -97,8 +97,9 @@
             color="blue-8"
             :hide-label="hideLabels"
             @click="openGallery('certification-gallery', 0)"
-            class="q-mt-md"
+            class="q-mt-md row"
           >
+            <p v-if="$q.screen.gt.sm" class="q-pl-sm q-ma-none">Album</p>
             <q-tooltip anchor="top left" :offset="[42, 36]">{{ $t('photoGallery.title') }}</q-tooltip>
           </q-btn>
 
@@ -110,6 +111,7 @@
             @click="$router.push({ name: 'GDPRclient' })"
             class="q-mt-md"
           >
+            <p v-if="$q.screen.gt.sm" class="q-pl-sm q-ma-none">GDPR</p>
             <q-tooltip anchor="top left" :offset="[42, 36]">{{ $t('gdpr.title') }}</q-tooltip>
           </q-btn>
 
@@ -121,6 +123,7 @@
             @click="$router.push({ name: 'Certification' })"
             class="q-mt-md"
           >
+            <p v-if="$q.screen.gt.sm" class="q-pl-sm q-ma-none">MDRT</p>
             <q-tooltip anchor="top left" :offset="[42, 36]">{{ $t('certification.title') }}</q-tooltip>
           </q-btn>
         </div>

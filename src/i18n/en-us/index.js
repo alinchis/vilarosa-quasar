@@ -62,6 +62,11 @@ export default {
     recPriceTitle: 'Reception Prices',
     noBreakfast: 'w/o Breakfast',
 
+    holiday: {
+      title: 'Holiday',
+      text: 'We are on holiday until January 10th 2022. We wish you Happy Holidays and a Happy New Year!',
+    },
+
     reservations: {
       title: 'Reservations',
       text: 'For reservations please contact Reception on the phone or email, daily from 8 AM to 8 PM. For emergencies outside working hours please contact us on Telegram App.',

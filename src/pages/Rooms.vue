@@ -18,6 +18,17 @@
     <div class="fit row wrap justify-center items-start content-start">
       <div  class="fit rooms-container column q-pb-xl">
 
+        <!-- Holiday Message area ---------------------------------------------------------------------------------- -->
+        <div class="reservation-container column q-pb-xl text-amber-1">
+          <p class="section-title-first">{{ $t('rooms.holiday.title') }}</p>
+          <q-separator />
+          <div class="reservation-box">
+            <div class="row">
+              <p class="section-subtitle2-first">{{ $t('rooms.holiday.text') }}</p>
+            </div>
+          </div>
+        </div>
+
         <!-- Reservations area ------------------------------------------------------------------------------------- -->
         <div class="reservation-container column">
           <p class="section-title-first">{{ $t('rooms.reservations.title') }}</p>
