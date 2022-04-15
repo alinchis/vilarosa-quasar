@@ -67,6 +67,11 @@ export default {
       text: 'Suntem în concediu până în 10 ianuarie 2022. Vă dorim sărbători fericite si să ne vedem cu bine în noul an!',
     },
 
+    EasterHoliday: {
+      title: 'Concediu de Paste',
+      text: 'In perioada 22-25 aprilie 2022, nu oferim servicii de cazare. Vă dorim sărbători fericite!',
+    },
+
     reservations: {
       title: 'Rezervări',
       text: 'Pentru rezervări vă rugăm să contactați Recepția la telefon sau pe email, zilnic între orele 8:00-20:00. Pentru urgențe, în afara programului, vă rugăm să ne contactați pe aplicația Telegram.',
@@ -112,24 +117,24 @@ export default {
     recPrices: {
       rooms2s: {
         sglRoom: '',
-        dblRoom: '120 LEI',
-        dbbRoom: '120 LEI',
-        triRoom: '160 LEI',
-        apt: '180 LEI',
+        dblRoom: '140 LEI',
+        dbbRoom: '140 LEI',
+        triRoom: '190 LEI',
+        apt: '210 LEI',
       },
 
       rooms2sp: {
-        sglRoom: '125 LEI',
-        dblRoom: '140 LEI',
+        sglRoom: '140 LEI',
+        dblRoom: '160 LEI',
         dbbRoom: '',
-        triRoom: '180 LEI',
+        triRoom: '210 LEI',
         apt: '',
       },
 
       rooms3s: {
-        sglRoom: '125 LEI',
-        dblRoom: '140 LEI',
-        dbbRoom: '140 LEI',
+        sglRoom: '140 LEI',
+        dblRoom: '160 LEI',
+        dbbRoom: '160 LEI',
         triRoom: '',
         apt: '',
       }
@@ -139,9 +144,9 @@ export default {
 
     priceInfo: {
       title: 'Info Tarife',
-      notes: 'Tarifele de cazare afișate sunt exprimate în LEI, fără Mic Dejun, includ toate taxele (taxa hotelieră, TVA 5%) și sunt valabile începând cu data de 01 August 2021. Aceste tarife pot suferi modificări, dar rezervările se onorează la tarifele comunicate în scris (e-mail, sms).',
+      notes: 'Tarifele de cazare afișate sunt exprimate în LEI, fără Mic Dejun, includ toate taxele (taxa hotelieră, TVA 5%) și sunt valabile începând cu data de 04 Aprilie 2022. Aceste tarife pot suferi modificări, dar rezervările se onorează la tarifele comunicate în scris (e-mail, sms).',
       rooms: 'Tarifele de cazare sunt calculate pentru cameră /zi hotelieră. Single, Double și Triple reprezintă numărul de locuri disponibile în camera respectivă, respectiv una, două sau trei persoane. Nu se va caza în camere un număr de persoane mai mare decât numărul de locuri disponibile.',
-      breakfast: 'Tariful pentru Mic Dejun este de 25 LEI /persoană (include TVA 5%).',
+      breakfast: 'Tariful pentru Mic Dejun este de 30 LEI /persoană (include TVA 5%).',
     },
   },
 

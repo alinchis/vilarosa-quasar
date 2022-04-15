@@ -67,6 +67,11 @@ export default {
       text: 'We are on holiday until January 10th 2022. We wish you Happy Holidays and a Happy New Year!',
     },
 
+    EasterHoliday: {
+      title: 'Easter Holiday',
+      text: 'During April 22nd-25th 2022 we are closed. We wish you Happy Holidays!',
+    },
+
     reservations: {
       title: 'Reservations',
       text: 'For reservations please contact Reception on the phone or email, daily from 8 AM to 8 PM. For emergencies outside working hours please contact us on Telegram App.',
@@ -112,24 +117,24 @@ export default {
     recPrices: {
       rooms2s: {
         sglRoom: '',
-        dblRoom: '120 LEI',
-        dbbRoom: '120 LEI',
-        triRoom: '160 LEI',
-        apt: '180 LEI',
+        dblRoom: '140 LEI',
+        dbbRoom: '140 LEI',
+        triRoom: '190 LEI',
+        apt: '210 LEI',
       },
 
       rooms2sp: {
-        sglRoom: '125 LEI',
-        dblRoom: '140 LEI',
+        sglRoom: '140 LEI',
+        dblRoom: '160 LEI',
         dbbRoom: '',
-        triRoom: '180 LEI',
+        triRoom: '210 LEI',
         apt: '',
       },
 
       rooms3s: {
-        sglRoom: '125 LEI',
-        dblRoom: '140 LEI',
-        dbbRoom: '140 LEI',
+        sglRoom: '140 LEI',
+        dblRoom: '160 LEI',
+        dbbRoom: '160 LEI',
         triRoom: '',
         apt: '',
       }
@@ -139,9 +144,9 @@ export default {
 
     priceInfo: {
       title: 'Price Info',
-      notes: 'All prices are displayed in local currency ( Romanian LEU / RON ), do not include Breakfast, but include all taxes (hotel tax, VAT 5%) and are active starting August 1st 2021. These prices may change, but we will provide our services to clients at the confirmed price.',
+      notes: 'All prices are displayed in local currency ( Romanian LEU / RON ), do not include Breakfast, but include all taxes (hotel tax, VAT 5%) and are active starting April 4th 2022. These prices may change, but we will provide our services to clients at the confirmed price.',
       rooms: 'The prices are calculated given for room type /hotel day. Single, Double and Triple refer to the places available for that room type, one, two or three people. We will acommodate no more people per room than the available places. ',
-      breakfast: 'Breakfast price is 25 LEI /person (including VAT 5%).',
+      breakfast: 'Breakfast price is 30 LEI /person (including VAT 5%).',
     },
   },
 
