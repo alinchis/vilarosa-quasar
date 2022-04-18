@@ -35,7 +35,7 @@
           :hide-label="hideLabels"
           class="q-mt-md"
 
-          type="a" href="/Downloads/2021.06.11 GDPR_client_RO.pdf"
+          type="a" href="/Downloads/2022.04.18 GDPR_client_RO.pdf"
         ></q-btn>
 
         <q-btn
@@ -46,7 +46,7 @@
           :hide-label="hideLabels"
           class="q-mt-md"
 
-          type="a" href="/Downloads/2021.06.11 GDPR_client_EN.pdf"
+          type="a" href="/Downloads/2022.04.18 GDPR_client_EN.pdf"
         ></q-btn>
       </div>
     </q-page-sticky>
@@ -72,26 +72,26 @@ export default {
       if (this.$root.$i18n.locale === 'ro-ro') {
         return [
           {
-            thumb: 'GDPR/2021.06.11 GDPR_client_RO_1.png',
-            src: 'GDPR/2021.06.11 GDPR_client_RO_1.png',
+            thumb: 'GDPR/2022.04.18 GDPR_client_RO_1.png',
+            src: 'GDPR/2022.04.18 GDPR_client_RO_1.png',
             caption: '',
           },
           {
-            thumb: 'GDPR/2021.06.11 GDPR_client_RO_2.png',
-            src: 'GDPR/2021.06.11 GDPR_client_RO_2.png',
+            thumb: 'GDPR/2022.04.18 GDPR_client_RO_2.png',
+            src: 'GDPR/2022.04.18 GDPR_client_RO_2.png',
             caption: '',
           },
         ];
       } else {
         return [
           {
-            thumb: 'GDPR/2021.06.11 GDPR_client_EN_1.png',
-            src: 'GDPR/2021.06.11 GDPR_client_EN_1.png',
+            thumb: 'GDPR/2022.04.18 GDPR_client_EN_1.png',
+            src: 'GDPR/2022.04.18 GDPR_client_EN_1.png',
             caption: '',
           },
           {
-            thumb: 'GDPR/2021.06.11 GDPR_client_EN_2.png',
-            src: 'GDPR/2021.06.11 GDPR_client_EN_2.png',
+            thumb: 'GDPR/2022.04.18 GDPR_client_EN_2.png',
+            src: 'GDPR/2022.04.18 GDPR_client_EN_2.png',
             caption: '',
           },
         ];

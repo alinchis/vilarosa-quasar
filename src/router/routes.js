@@ -49,7 +49,6 @@ const routes = [
 
       // gdpr paths
       { name: 'GDPRclient', path: 'gdprClient', component: () => import('pages/GDPRclient.vue') },
-      { name: 'GDPRgroup', path: 'gdprGroup', component: () => import('pages/GDPRgroup.vue') },
 
       // certification path
       { name: 'Certification', path: 'certification', component: () => import('pages/Certification.vue') },
