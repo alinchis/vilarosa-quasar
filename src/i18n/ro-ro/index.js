@@ -117,24 +117,24 @@ export default {
     recPrices: {
       rooms2s: {
         sglRoom: '',
-        dblRoom: '140 LEI',
-        dbbRoom: '140 LEI',
-        triRoom: '190 LEI',
-        apt: '210 LEI',
+        dblRoom: '150 LEI',
+        dbbRoom: '150 LEI',
+        triRoom: '205 LEI',
+        apt: '225 LEI',
       },
 
       rooms2sp: {
-        sglRoom: '140 LEI',
-        dblRoom: '160 LEI',
+        sglRoom: '150 LEI',
+        dblRoom: '170 LEI',
         dbbRoom: '',
-        triRoom: '210 LEI',
+        triRoom: '225 LEI',
         apt: '',
       },
 
       rooms3s: {
-        sglRoom: '140 LEI',
-        dblRoom: '160 LEI',
-        dbbRoom: '160 LEI',
+        sglRoom: '150 LEI',
+        dblRoom: '170 LEI',
+        dbbRoom: '170 LEI',
         triRoom: '',
         apt: '',
       }
@@ -144,7 +144,7 @@ export default {
 
     priceInfo: {
       title: 'Info Tarife',
-      notes: 'Tarifele de cazare afișate sunt exprimate în LEI, fără Mic Dejun, includ toate taxele (taxa hotelieră, TVA 5%) și sunt valabile începând cu data de 04 Aprilie 2022. Aceste tarife pot suferi modificări, dar rezervările se onorează la tarifele comunicate în scris (e-mail, sms).',
+      notes: 'Tarifele de cazare afișate sunt exprimate în LEI, fără Mic Dejun, includ toate taxele (taxa hotelieră, TVA 5%) și sunt valabile începând cu data de 05 Mai 2022. Aceste tarife pot suferi modificări, dar rezervările se onorează la tarifele comunicate în scris (e-mail, sms).',
       rooms: 'Tarifele de cazare sunt calculate pentru cameră /zi hotelieră. Single, Double și Triple reprezintă numărul de locuri disponibile în camera respectivă, respectiv una, două sau trei persoane. Nu se va caza în camere un număr de persoane mai mare decât numărul de locuri disponibile.',
       breakfast: 'Tariful pentru Mic Dejun este de 30 LEI /persoană (include TVA 5%).',
     },

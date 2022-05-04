@@ -117,24 +117,24 @@ export default {
     recPrices: {
       rooms2s: {
         sglRoom: '',
-        dblRoom: '140 LEI',
-        dbbRoom: '140 LEI',
-        triRoom: '190 LEI',
-        apt: '210 LEI',
+        dblRoom: '150 LEI',
+        dbbRoom: '150 LEI',
+        triRoom: '205 LEI',
+        apt: '225 LEI',
       },
 
       rooms2sp: {
-        sglRoom: '140 LEI',
-        dblRoom: '160 LEI',
+        sglRoom: '150 LEI',
+        dblRoom: '170 LEI',
         dbbRoom: '',
-        triRoom: '210 LEI',
+        triRoom: '225 LEI',
         apt: '',
       },
 
       rooms3s: {
-        sglRoom: '140 LEI',
-        dblRoom: '160 LEI',
-        dbbRoom: '160 LEI',
+        sglRoom: '150 LEI',
+        dblRoom: '170 LEI',
+        dbbRoom: '170 LEI',
         triRoom: '',
         apt: '',
       }
@@ -144,7 +144,7 @@ export default {
 
     priceInfo: {
       title: 'Price Info',
-      notes: 'All prices are displayed in local currency ( Romanian LEU / RON ), do not include Breakfast, but include all taxes (hotel tax, VAT 5%) and are active starting April 4th 2022. These prices may change, but we will provide our services to clients at the confirmed price.',
+      notes: 'All prices are displayed in local currency ( Romanian LEU / RON ), do not include Breakfast, but include all taxes (hotel tax, VAT 5%) and are active starting May 5th 2022. These prices may change, but we will provide our services to clients at the confirmed price.',
       rooms: 'The prices are calculated given for room type /hotel day. Single, Double and Triple refer to the places available for that room type, one, two or three people. We will acommodate no more people per room than the available places. ',
       breakfast: 'Breakfast price is 30 LEI /person (including VAT 5%).',
     },
