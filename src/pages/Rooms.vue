@@ -19,15 +19,15 @@
       <div  class="fit rooms-container column q-pb-xl">
 
         <!-- Holiday Message area ---------------------------------------------------------------------------------- -->
-        <div class="reservation-container column q-pb-xl text-amber-1">
-          <p class="section-title-first">{{ $t('rooms.EasterHoliday.title') }}</p>
-          <q-separator />
-          <div class="reservation-box">
-            <div class="row">
-              <p class="section-subtitle2-first">{{ $t('rooms.EasterHoliday.text') }}</p>
-            </div>
-          </div>
-        </div>
+<!--        <div class="reservation-container column q-pb-xl text-amber-1">-->
+<!--          <p class="section-title-first">{{ $t('rooms.EasterHoliday.title') }}</p>-->
+<!--          <q-separator />-->
+<!--          <div class="reservation-box">-->
+<!--            <div class="row">-->
+<!--              <p class="section-subtitle2-first">{{ $t('rooms.EasterHoliday.text') }}</p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
 
         <!-- Reservations area ------------------------------------------------------------------------------------- -->
         <div class="reservation-container column">
