@@ -31,7 +31,7 @@
             <text-box :text-content="[ $t('services.gdpr') ]" :icon-list='[ "las la-user-check" ]' text-color="text-red-9"></text-box>
             <text-box :text-content="[ $t('services.roomClean') ]" :icon-list='[ "las la-broom" ]' text-color="text-red-9"></text-box>
             <text-box :text-content="[ $t('services.lostObj') ]" :icon-list='[ "las la-exclamation-triangle" ]' text-color="text-red-9"></text-box>
-            <text-box :text-content="[ $t('services.breakfast') ]" :icon-list='[ "las la-utensils" ]' text-color="text-red-9"></text-box>
+<!--            <text-box :text-content="[ $t('services.breakfast') ]" :icon-list='[ "las la-utensils" ]' text-color="text-red-9"></text-box>-->
             <text-box :text-content="[ $t('services.discounts') ]" :icon-list='[ "las la-percent" ]' text-color="text-red-9"></text-box>
             <text-box :text-content="[ $t('services.payment') ]" :icon-list='[ "las la-hand-holding-usd" ]' text-color="text-red-9"></text-box>
             <text-box :text-content="[ $t('services.pets') ]" :icon-list='[ "las la-paw" ]' text-color="text-red-9"></text-box>

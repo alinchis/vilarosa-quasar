@@ -26,7 +26,7 @@ export default {
     info: 'Vila Rosa vă pune la dispoziție servicii de cazare de 2 și 3 stele, împărțite în 2 pavilioane, și Mic Dejun în pavilionul de 2 stele. Serviciile de cazare sunt disponibile pe tot parcursul anului, cu exceptia marilor sarbatori legale, cand personalul este in concediu.',
     buildings: 'Pavilioanele nu au instalat ascensor. Clădirea de 2* are camerele distribuite pe 3 etaje și mansardă. Camerele sunt numerotate de la 10 la 43, cu cifra zecilor reprezentând etajul. Clădirea de 3* are camerele distribuite pe parter, 2 etaje și mansardă. Camerele sunt numerotate de la 101 la 404, cu cifra sutelor reprezentând nivelul.',
     parking: 'Unitatea vă pune la dispoziție parcare auto în incinta proprie cu supraveghere video.',
-    reception: 'Recepția funcționează în regim zilnic între orele 08:00-20:00. Nu se efectuează rezervări și cazări în afara programului. Pentru urgențe, în afara programului, vă rugăm să ne contactați pe aplicația Telegram.',
+    reception: 'Recepția funcționează în regim zilnic între orele 08:00-16:00. Nu se efectuează rezervări și cazări în afara programului. Pentru urgențe, în afara programului, vă rugăm să ne contactați pe aplicația Telegram.',
     reservation: 'La finalizarea procesului de rezervare, Recepția transmite confirmarea rezervării prin mesaj pe mobil sau e-mail. Numai rezervările care au primit confirmare sunt considerate valabile. Confirmarea cuprinde numele persoanei care a făcut rezervarea, perioada șederii, numărul și tipul camerelor rezervate, numărul de oaspeți asteptați, tarifele acordate și numele recepționerului de serviciu. În ziua cazării, e posibil ca Recepția să contactateze telefonic persoana responsabilă de rezervare pentru a confirma sosirea.',
     checkInOut: 'Ziua hotelieră începe la ora 15:00 în ziua cazării și se încheie la ora 11:00, în ziua următoare. Cazările se efectuează doar în intervalul 15:00-20:00. Pentru excepții vă rugăm să anunțați Recepția din timp, deoarece pot apărea suprapuneri cu alte rezervări și se pot percepe tarife suplimentare.',
     gdpr: 'La momentul cazării, cliențiilor li se cere să completeze și semneze fișa de cazare (HG 237/2001 actualizată) și Declarația de Consimțămant pentru procesarea datelor personale (GDPR), în caz că nu este deja. Documentele menționate reprezintă obligativitate legală pentru unitatea hotelieră și nu se vor caza clienți care refuză să semneze.',
@@ -72,9 +72,14 @@ export default {
       text: 'In perioada 22-25 aprilie 2022, nu oferim servicii de cazare. Vă dorim sărbători fericite!',
     },
 
+    PermanentClosure: {
+      title: 'Vila Rosa se inchide!',
+      text: 'Incepand cu 30 Septembrie 2022, Vila Rosa se inchide permanent. Dorim sa ne orientam catre alte activitati. Multumim tuturor pentru increderea acordata!',
+    },
+
     reservations: {
       title: 'Rezervări',
-      text: 'Pentru rezervări vă rugăm să contactați Recepția la telefon sau pe email, zilnic între orele 8:00-20:00. Pentru urgențe, în afara programului, vă rugăm să ne contactați pe aplicația Telegram.',
+      text: 'Pentru rezervări vă rugăm să contactați Recepția la telefon sau pe email, zilnic între orele 8:00-16:00. Pentru urgențe, în afara programului, vă rugăm să ne contactați pe aplicația Telegram.',
     },
 
     titles: {
@@ -117,24 +122,24 @@ export default {
     recPrices: {
       rooms2s: {
         sglRoom: '',
-        dblRoom: '150 LEI',
-        dbbRoom: '150 LEI',
-        triRoom: '205 LEI',
-        apt: '225 LEI',
+        dblRoom: '160 LEI',
+        dbbRoom: '160 LEI',
+        triRoom: '220 LEI',
+        apt: '240 LEI',
       },
 
       rooms2sp: {
-        sglRoom: '150 LEI',
-        dblRoom: '170 LEI',
+        sglRoom: '160 LEI',
+        dblRoom: '180 LEI',
         dbbRoom: '',
-        triRoom: '225 LEI',
+        triRoom: '240 LEI',
         apt: '',
       },
 
       rooms3s: {
-        sglRoom: '150 LEI',
-        dblRoom: '170 LEI',
-        dbbRoom: '170 LEI',
+        sglRoom: '160 LEI',
+        dblRoom: '180 LEI',
+        dbbRoom: '180 LEI',
         triRoom: '',
         apt: '',
       }
@@ -144,9 +149,10 @@ export default {
 
     priceInfo: {
       title: 'Info Tarife',
-      notes: 'Tarifele de cazare afișate sunt exprimate în LEI, fără Mic Dejun, includ toate taxele (taxa hotelieră, TVA 5%) și sunt valabile începând cu data de 05 Mai 2022. Aceste tarife pot suferi modificări, dar rezervările se onorează la tarifele comunicate în scris (e-mail, sms).',
+      notes: 'Tarifele de cazare afișate sunt exprimate în LEI, fără Mic Dejun, includ toate taxele (taxa hotelieră, TVA 5%) și sunt valabile începând cu data de 01 Iulie 2022. Aceste tarife pot suferi modificări, dar rezervările se onorează la tarifele comunicate în scris (e-mail, sms).',
       rooms: 'Tarifele de cazare sunt calculate pentru cameră /zi hotelieră. Single, Double și Triple reprezintă numărul de locuri disponibile în camera respectivă, respectiv una, două sau trei persoane. Nu se va caza în camere un număr de persoane mai mare decât numărul de locuri disponibile.',
       breakfast: 'Tariful pentru Mic Dejun este de 30 LEI /persoană (include TVA 5%).',
+      noBreakfast: 'Nu se serveste Mic Dejun.',
     },
   },
 

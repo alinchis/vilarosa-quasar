@@ -26,7 +26,7 @@ export default {
     info: 'We offer 2 and 3 stars hotel rooms and 3 star restaurant services. The hotel rooms are divided in two buildings at the same site, the Breakfant is served inside the main, 2 stars hotel, building. The villa is open all year round, with the exception of the big holidays when our employees are on vacation.',
     buildings: 'The buildings do not have elevators. The 2* building has the rooms available on 4 floors. Room numbers run from 10 to 43, with the tens figure representing the floor number. The 3* building has its rooms available on 4 floors. Room numbers run from 101 to 404, with the hundreds figure representing the floor number.',
     parking: 'We offer free parking with video surveillance inside our property.',
-    reception: 'Reception is open daily from 8 AM to 8 PM. For emergencies outside working hours please contact us on Telegram App.',
+    reception: 'Reception is open daily from 8 AM to 4 PM. For emergencies outside working hours please contact us on Telegram App.',
     reservation: 'After the reservation process is complete, the Reception sends a confirmation message via mobile SMS or e-mail. Only the reservations that have been confirmed are considered valid. The confirmation message contains the name of the person making the reservation, accommodation period, room quantity and type, number of people expected, prices given and the receptionist name. On the arrival day, the Reception may contact the reservation person for arrival confirmation.',
     checkInOut: 'The hotel day starts at 15:00 on the day of arrival and ends at 11:00, the next day. Check-in is available only between 15:00-20:00. For different arrangements please contact Reception ahead of time, for there might be overlapping with other clients and fees may apply.',
     gdpr: 'At check in clients are required to fill in and sign the check in form (HG 237/2001 updated) and the consent to process personal data (GDPR). These are mandatory by law for hotels and we will not service customers who refuse to sign.',
@@ -72,9 +72,14 @@ export default {
       text: 'During April 22nd-25th 2022 we are closed. We wish you Happy Holidays!',
     },
 
+    PermanentClosure: {
+      title: 'Vila Rosa is closing!',
+      text: 'Starting September 30th 2022, Vila Rosa is closing. We will focus on other activities. We would like to thank everybody for the confidence in our services!',
+    },
+
     reservations: {
       title: 'Reservations',
-      text: 'For reservations please contact Reception on the phone or email, daily from 8 AM to 8 PM. For emergencies outside working hours please contact us on Telegram App.',
+      text: 'For reservations please contact Reception on the phone or email, daily from 8 AM to 4 PM. For emergencies outside working hours please contact us on Telegram App.',
     },
 
     titles: {
@@ -117,24 +122,24 @@ export default {
     recPrices: {
       rooms2s: {
         sglRoom: '',
-        dblRoom: '150 LEI',
-        dbbRoom: '150 LEI',
-        triRoom: '205 LEI',
-        apt: '225 LEI',
+        dblRoom: '160 LEI',
+        dbbRoom: '160 LEI',
+        triRoom: '220 LEI',
+        apt: '240 LEI',
       },
 
       rooms2sp: {
-        sglRoom: '150 LEI',
-        dblRoom: '170 LEI',
+        sglRoom: '160 LEI',
+        dblRoom: '180 LEI',
         dbbRoom: '',
-        triRoom: '225 LEI',
+        triRoom: '240 LEI',
         apt: '',
       },
 
       rooms3s: {
-        sglRoom: '150 LEI',
-        dblRoom: '170 LEI',
-        dbbRoom: '170 LEI',
+        sglRoom: '160 LEI',
+        dblRoom: '180 LEI',
+        dbbRoom: '180 LEI',
         triRoom: '',
         apt: '',
       }
@@ -144,9 +149,10 @@ export default {
 
     priceInfo: {
       title: 'Price Info',
-      notes: 'All prices are displayed in local currency ( Romanian LEU / RON ), do not include Breakfast, but include all taxes (hotel tax, VAT 5%) and are active starting May 5th 2022. These prices may change, but we will provide our services to clients at the confirmed price.',
+      notes: 'All prices are displayed in local currency ( Romanian LEU / RON ), do not include Breakfast, but include all taxes (hotel tax, VAT 5%) and are active starting July 1st 2022. These prices may change, but we will provide our services to clients at the confirmed price.',
       rooms: 'The prices are calculated given for room type /hotel day. Single, Double and Triple refer to the places available for that room type, one, two or three people. We will acommodate no more people per room than the available places. ',
       breakfast: 'Breakfast price is 30 LEI /person (including VAT 5%).',
+      noBreakfast: 'Breakfast is not available.',
     },
   },
 
