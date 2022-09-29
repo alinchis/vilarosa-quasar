@@ -73,7 +73,7 @@ export default {
     },
 
     PermanentClosure: {
-      title: 'Vila Rosa is closing!',
+      title: 'Vila Rosa is closed!',
       text: 'Starting September 30th 2022, Vila Rosa is closing. We will focus on other activities. We would like to thank everybody for the confidence in our services!',
     },
 

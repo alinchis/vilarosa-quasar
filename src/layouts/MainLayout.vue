@@ -1,15 +1,15 @@
 <template>
   <q-layout view="lHh lpr lFf" class="">
-    <!-- language toggle button ---------------------------------------------------------------------------------- -->
-    <q-btn v-if="showHeader" @click="toggleLanguage" round class="lang-btn fixed-top-left z-max">
-      <q-img v-if="language === 'ro-ro'" src="~assets/FlagIcons/RO-flag-icon.png"></q-img>
-      <q-img v-if="language === 'en-us'" src="~assets/FlagIcons/USA-flag-icon.png"></q-img>
-    </q-btn>
+        <!-- language toggle button ---------------------------------------------------------------------------------- -->
+<!--    <q-btn v-if="showHeader" @click="toggleLanguage" round class="lang-btn fixed-top-left z-max">-->
+<!--      <q-img v-if="language === 'ro-ro'" src="~assets/FlagIcons/RO-flag-icon.png"></q-img>-->
+<!--      <q-img v-if="language === 'en-us'" src="~assets/FlagIcons/USA-flag-icon.png"></q-img>-->
+<!--    </q-btn>-->
     <!-- header ---------------------------------------------------------------------------------------------------- -->
-    <div v-if="showHeader" class="fixed-top bg-transparent z-top row items-center justify-center">
-            <!-- navigation buttons -------------------------------------------------------------------------------------- -->
-      <nav-bar></nav-bar>
-    </div>
+<!--    <div v-if="showHeader" class="fixed-top bg-transparent z-top row items-center justify-center">-->
+<!--            &lt;!&ndash; navigation buttons &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; &ndash;&gt;-->
+<!--      <nav-bar></nav-bar>-->
+<!--    </div>-->
 
     <!-- page container -------------------------------------------------------------------------------------------- -->
     <q-page-container class="fit q-pa-none">
@@ -142,7 +142,7 @@ import NavBar from "components/NavBar";
 
 export default {
   name: 'MainLayout',
-  components: { GdprMessage, NavBar },
+  components: { GdprMessage },
 
   data () {
     return {
@@ -211,6 +211,20 @@ export default {
 
 .nav-fabs-sticky
   //padding-top: 100px
+
+#overlay
+  position: fixed /* Sit on top of the page content */
+  display: none /* Hidden by default */
+  width: 100% /* Full width (cover the whole page) */
+  height: 100% /* Full height (cover the whole page) */
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: rgba(0,0,0,0.5) /* Black background with opacity */
+  z-index: 2 /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer /* Add a pointer on hover */
+
 
 @media (hover)
   .nav-fabs-sticky

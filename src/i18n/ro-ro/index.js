@@ -73,7 +73,7 @@ export default {
     },
 
     PermanentClosure: {
-      title: 'Vila Rosa se inchide!',
+      title: 'Vila Rosa s-a inchis!',
       text: 'Incepand cu 30 Septembrie 2022, Vila Rosa se inchide permanent. Dorim sa ne orientam catre alte activitati. Multumim tuturor pentru increderea acordata!',
     },
 
